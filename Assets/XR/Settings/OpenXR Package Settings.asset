@@ -53,11 +53,11 @@ MonoBehaviour:
   m_Name: MetaHandTrackingAim Android
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
+  nameUi: Meta Hand Tracking Aim
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.metahandtrackingaim
+  openxrExtensionStrings: XR_FB_hand_tracking_aim
+  company: Unity
   priority: 0
   required: 0
 --- !u!114 &-6387801026809655195
@@ -475,8 +475,6 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -1631338512540984739}
-  - {fileID: -8696521451293371996}
   - {fileID: -6035233315373434765}
   - {fileID: -1099154832874414452}
   - {fileID: 3105915928648698822}
@@ -486,6 +484,7 @@ MonoBehaviour:
   - {fileID: 842427094450884399}
   - {fileID: 3713597372739956380}
   - {fileID: 7524777810318779313}
+  - {fileID: -1631338512540984739}
   - {fileID: 4402108733707795745}
   - {fileID: 1151185679116449691}
   - {fileID: 6594538237688930791}
@@ -496,6 +495,7 @@ MonoBehaviour:
   - {fileID: -1384387824298381853}
   - {fileID: -2947797874211974360}
   - {fileID: 4597168876308195138}
+  - {fileID: -8696521451293371996}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -900,6 +900,7 @@ MonoBehaviour:
   - {fileID: -3258491660741337355}
   - {fileID: -5984947623869189508}
   - {fileID: 640488865429945592}
+  - {fileID: -7691555797742501763}
   - {fileID: -1965385114298502861}
   - {fileID: 2064761138295001382}
   - {fileID: -4687932851186170224}
@@ -910,6 +911,7 @@ MonoBehaviour:
   - {fileID: -6053578006178322956}
   - {fileID: -3931789734474135038}
   - {fileID: -8583642617135199154}
+  - {fileID: 8594575409891958084}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -954,10 +956,10 @@ MonoBehaviour:
   m_Name: HandTracking Android
   m_EditorClassIdentifier: 
   m_enabled: 0
-  nameUi: 
-  version: 
-  featureIdInternal: 
-  openxrExtensionStrings: 
-  company: 
-  priority: 0
+  nameUi: Hand Tracking Subsystem
+  version: 0.0.1
+  featureIdInternal: com.unity.openxr.feature.input.handtracking
+  openxrExtensionStrings: XR_EXT_hand_tracking
+  company: Unity
+  priority: -100
   required: 0
