@@ -1,10 +1,7 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
-using UnityEngine.XR.Interaction.Toolkit.Interactors;
-using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
-public class Move : MonoBehaviour
+public class MoveBox : MonoBehaviour
 {
     private XRPokeFollowAffordance pokeFollow;
     private Vector3 initialPosition;
@@ -17,7 +14,7 @@ public class Move : MonoBehaviour
     private void Start() {
         pokeFollow = GetComponent<XRPokeFollowAffordance>();
         initialPosition = transform.position;
-        hiddenPosition = initialPosition - Vector3.up * downDistance;
+        hiddenPosition = initialPosition - Vector3.forward * downDistance;
 
         // Desactivar el seguimiento automático al soltar
         pokeFollow.returnToInitialPosition = false;
