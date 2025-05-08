@@ -8,7 +8,7 @@ public class MolinoMovement : MonoBehaviour
     void Start()
     {
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
-        Move.TrabajandoChange += ContarArdillas;
+        ArdillaGolpe.TrabajandoChange += ContarArdillas;
         ContarArdillas(true);
     }
 
@@ -32,7 +32,7 @@ public class MolinoMovement : MonoBehaviour
 
         foreach (GameObject obj in ardillas)
         {
-            Move comp = obj.GetComponent<Move>();
+            ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
             if (comp != null && comp.trabajando)
             {
                 cantidad++;

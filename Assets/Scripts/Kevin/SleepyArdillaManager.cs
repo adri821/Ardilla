@@ -27,9 +27,9 @@ public class SleepyArdillaManager : MonoBehaviour
     }
 
     void DesactivarArdillasAleatorias() {
-        List<Move> ardillasActivas = new List<Move>();
+        List<ArdillaGolpe> ardillasActivas = new List<ArdillaGolpe>();
         foreach (GameObject obj in todasLasArdillas) {
-            Move comp = obj.GetComponent<Move>();
+            ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
             if (comp != null && comp.trabajando) {
                 ardillasActivas.Add(comp);
             }
