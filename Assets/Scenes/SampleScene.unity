@@ -271,6 +271,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionleft
+      value: 
+      objectReference: {fileID: 402494602}
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionrigth
+      value: 
+      objectReference: {fileID: 674500841}
     - target: {fileID: 7354177858607582525, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
       propertyPath: m_Name
       value: ArdillaFixCaras (4)
@@ -536,6 +544,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394336024}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &402494602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5967689310316253315, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 1627735379}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &402837050
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +815,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5666311922324554705, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
   m_PrefabInstance: {fileID: 8016553611685546525}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &674500841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4238984354899526239, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 1627735379}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &873975565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,6 +842,14 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.6469598
       objectReference: {fileID: 0}
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionleft
+      value: 
+      objectReference: {fileID: 402494602}
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionrigth
+      value: 
+      objectReference: {fileID: 674500841}
     - target: {fileID: 7354177858607582525, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
       propertyPath: m_Name
       value: ArdillaFixCaras (2)
@@ -1081,7 +1119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c7e61835ecf870448af1e5c48ebc7bfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1965,6 +2003,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionleft
+      value: 
+      objectReference: {fileID: 402494602}
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionrigth
+      value: 
+      objectReference: {fileID: 674500841}
     - target: {fileID: 7354177858607582525, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
       propertyPath: m_Name
       value: ArdillaFixCaras (3)
@@ -2427,33 +2473,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1818048591858957089, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
-      propertyPath: m_Size.y
-      value: 0.13323931
-      objectReference: {fileID: 0}
-    - target: {fileID: 1818048591858957089, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
-      propertyPath: m_Center.y
-      value: 1.6469598
-      objectReference: {fileID: 0}
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionleft
+      value: 
+      objectReference: {fileID: 402494602}
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionrigth
+      value: 
+      objectReference: {fileID: 674500841}
     - target: {fileID: 7354177858607582525, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
       propertyPath: m_Name
       value: ArdillaFixCaras (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7354177858607582525, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
-      propertyPath: m_TagString
-      value: ardilla
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873586689500338055, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.08057315
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873586689500338055, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.08057315
-      objectReference: {fileID: 0}
-    - target: {fileID: 7873586689500338055, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.08057315
       objectReference: {fileID: 0}
     - target: {fileID: 7873586689500338055, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2617,6 +2647,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionleft
+      value: 
+      objectReference: {fileID: 402494602}
+    - target: {fileID: 5479980090627406754, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
+      propertyPath: vibracitionrigth
+      value: 
+      objectReference: {fileID: 674500841}
     - target: {fileID: 7354177858607582525, guid: acc0368b79fdaeb49be369dea7359f39, type: 3}
       propertyPath: m_Name
       value: ArdillaFixCaras
