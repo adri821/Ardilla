@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Scenario_Prueba_Kevin.unity
+    guid: 4c1c96d3d6167bf4aaaed5d5143ed8af
+  - enabled: 1
+    path: Assets/Scenes/Scenario_Prueba_Multi_Kevin.unity
+    guid: e318167b30a4fec4c884be284d605dbd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5e90c28e37197b54f8fefdc8053f4d6d, type: 2}
