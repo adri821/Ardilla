@@ -1,6 +1,10 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class ArdillaGolpe : MonoBehaviour
 {
@@ -25,9 +29,6 @@ public class ArdillaGolpe : MonoBehaviour
         targetPosition = hiddenPosition;
         SetTrabajando(true, immediate: true);
 
-        if (!GetComponent<Collider>()) {
-            gameObject.AddComponent<BoxCollider>();
-        }
     }
 
     void Update() {
