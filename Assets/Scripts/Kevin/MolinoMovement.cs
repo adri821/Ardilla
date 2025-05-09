@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class MolinoMovement : MonoBehaviour
@@ -6,8 +7,12 @@ public class MolinoMovement : MonoBehaviour
     public float rotationSpeed, CantidadGofio, timeLeft, puntuacion;
     private int ardillasTrabajando;
     GameObject[] ardillas;
+    bool puntuacionCalculada;
+    public GameObject panel;
+    public TextMeshProUGUI puntuacionTxt, gofioTxt;
     void Start()
     {
+        puntuacionCalculada = false;
         timeLeft = 10;
         CantidadGofio = 0;
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
@@ -26,19 +31,13 @@ public class MolinoMovement : MonoBehaviour
                 transform.Rotate(Vector3.forward * (rotationSpeed * ardillasTrabajando) * Time.deltaTime, Space.World);
             }
         }
-        else
+        else if (!puntuacionCalculada)
         {
             StopCoroutine("calcularGofio");
             calcularPuntuacion();
         }
     }
-    /*
-    private void FixedUpdate()
-    {
-        CantidadGofio += ardillasTrabajando * 0.15f;
-        Debug.Log($"{CantidadGofio} Kilos de gofio tengo");
-    }
-    */
+
     private void ContarArdillas(bool trabajando)
     {
         ardillasTrabajando = GetArdillas();
@@ -75,5 +74,11 @@ public class MolinoMovement : MonoBehaviour
     private void calcularPuntuacion()
     {
         puntuacion = CantidadGofio * 1000;
+        panel.SetActive(true);
+        Debug.Log(puntuacion);
+        puntuacionCalculada = true;
+        gofioTxt.text = $"Kilos de gofio: {CantidadGofio.ToString()}";
+        puntuacionTxt.text = puntuacion.ToString();
+
     }
 }
