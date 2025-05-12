@@ -1,9 +1,49 @@
 fileFormatVersion: 2
-guid: aab91bc5d5f592b4b81659ada01046de
+guid: bd127cee9751f9b469fe6f5bf320b62f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BaseMuro
+    second: {fileID: 2100000, guid: 0f6dbd4b67dbb0a45bd946ce469a56a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BasePiedra.003
+    second: {fileID: 2100000, guid: e1bd6b0aed276404ebd5312cc22b04a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BasePiedra.004
+    second: {fileID: 2100000, guid: 332a845f3a2a08a498983d9f314f3e8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BasePiedra.005
+    second: {fileID: 2100000, guid: b72cdba320e7ac74a8e5424b54c068f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BasePiedra1.001
+    second: {fileID: 2100000, guid: f79cf47643c285944ba9474010b0db43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Variante2.002
+    second: {fileID: 2100000, guid: e5b8a94cc7d28c9459693921ed9f55ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Variante2.003
+    second: {fileID: 2100000, guid: c03a1e74bcdc3614dae8b72c34715a9c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 5c90f50ebdbf4277f77027b68e489ad3
+    second: {fileID: 2800000, guid: 224ed64109f19b14fbd3808cb76f08a7, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
