@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MolinoMovement : MonoBehaviour
 {
@@ -9,14 +10,14 @@ public class MolinoMovement : MonoBehaviour
     GameObject[] ardillas;
     bool puntuacionCalculada;
     public GameObject panel;
-    public TextMeshProUGUI puntuacionTxt, gofioTxt;
+    public Text puntuacionTxt, gofioTxt;
     void Start()
     {
         puntuacionCalculada = false;
-        timeLeft = 10;
+        timeLeft = 60;
         CantidadGofio = 0;
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
-        ArdillaTrabajando.TrabajandoChange += ContarArdillas;
+        ArdillaGolpe.TrabajandoChange += ContarArdillas;
         ContarArdillas(true);
         StartCoroutine("calcularGofio");
     }
@@ -50,7 +51,7 @@ public class MolinoMovement : MonoBehaviour
 
         foreach (GameObject obj in ardillas)
         {
-            ArdillaTrabajando comp = obj.GetComponent<ArdillaTrabajando>();
+            ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
             if (comp != null && comp.trabajando)
             {
                 cantidad++;

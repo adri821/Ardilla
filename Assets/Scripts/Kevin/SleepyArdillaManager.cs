@@ -23,11 +23,11 @@ public class SleepyArdillaManager : MonoBehaviour
     {
         // 1. Obtener todas las ardillas activas (trabajando == true)
         GameObject[] todasLasArdillas = GameObject.FindGameObjectsWithTag("ardilla");
-        List<ArdillaTrabajando> ardillasActivas = new List<ArdillaTrabajando>();
+        List<ArdillaGolpe> ardillasActivas = new List<ArdillaGolpe>();
 
         foreach (GameObject obj in todasLasArdillas)
         {
-            ArdillaTrabajando comp = obj.GetComponent<ArdillaTrabajando>();
+            ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
             if (comp != null && comp.trabajando)
             {
                 ardillasActivas.Add(comp);
