@@ -11,14 +11,15 @@ public class MolinoMovement : MonoBehaviour
     bool puntuacionCalculada;
     public GameObject panel;
     public Text puntuacionTxt, gofioTxt;
+
     void Start()
     {
         puntuacionCalculada = false;
         timeLeft = 60;
         CantidadGofio = 0;
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
-        ArdillaGolpe.TrabajandoChange += ContarArdillas;
-        ContarArdillas(true);
+        ArdillaGolpe.EstadoCambiado += ActualizarTrabajoArdilla;
+        ardillasTrabajando = GetArdillas();
         StartCoroutine("calcularGofio");
     }
 
@@ -39,7 +40,7 @@ public class MolinoMovement : MonoBehaviour
         }
     }
 
-    private void ContarArdillas(bool trabajando)
+    private void ActualizarTrabajoArdilla(ArdillaGolpe.EstadoArdilla nuevoEstado, bool estaTrabajando)
     {
         ardillasTrabajando = GetArdillas();
     }
@@ -52,7 +53,7 @@ public class MolinoMovement : MonoBehaviour
         foreach (GameObject obj in ardillas)
         {
             ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
-            if (comp != null && comp.trabajando)
+            if (comp != null && comp.estadoActual == ArdillaGolpe.EstadoArdilla.Trabajando)
             {
                 cantidad++;
             }
