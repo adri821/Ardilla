@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MolinoMovement : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class MolinoMovement : MonoBehaviour
     GameObject[] ardillas;
     bool puntuacionCalculada;
     public GameObject panel;
-    public TextMeshProUGUI puntuacionTxt, gofioTxt;
+    public Text puntuacionTxt, gofioTxt;
     void Start()
     {
         puntuacionCalculada = false;
@@ -77,7 +78,7 @@ public class MolinoMovement : MonoBehaviour
         panel.SetActive(true);
         Debug.Log(puntuacion);
         puntuacionCalculada = true;
-        gofioTxt.text = $"Kilos de gofio: {CantidadGofio.ToString()}";
+        gofioTxt.text = CantidadGofio.ToString();
         puntuacionTxt.text = puntuacion.ToString();
 
     }

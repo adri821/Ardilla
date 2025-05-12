@@ -13,7 +13,6 @@ public class ArdillaTrabajando : MonoBehaviour
          RPC_SetTrabajando(estado);
         
     }
-
     void RPC_SetTrabajando(bool estado)
     {
         if (trabajando != estado)
