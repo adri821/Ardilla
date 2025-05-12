@@ -1,28 +1,25 @@
 using UnityEngine;
 
-
-//esto va a asignado o añadido a las ardillas,
-//estas deben tener el tag de "ardilla para funcionar con el molino"
 public class ArdillaTrabajando : MonoBehaviour
 {
-    public bool trabajando;
+    public bool trabajando = true;
 
     public delegate void OnTrabajandoChange(bool trabajando);
     public static event OnTrabajandoChange TrabajandoChange;
 
-    void Start()
+    public void SetTrabajando(bool estado)
     {
-        trabajando = true; 
+        
+         RPC_SetTrabajando(estado);
+        
     }
 
-
-    //cambia la condicion de trabajando o no
-    public void SetTrabajando(bool estado)
+    void RPC_SetTrabajando(bool estado)
     {
         if (trabajando != estado)
         {
             trabajando = estado;
-            TrabajandoChange?.Invoke(trabajando); 
+            TrabajandoChange?.Invoke(trabajando);
         }
     }
 }
