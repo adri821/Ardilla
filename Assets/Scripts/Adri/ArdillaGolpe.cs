@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ArdillaGolpe : MonoBehaviour
@@ -8,20 +9,20 @@ public class ArdillaGolpe : MonoBehaviour
     public Vector3 initialPosition;
     public Vector3 hiddenPosition;
     private Vector3 targetPosition;
+    private Vector3 nextPosition;
 
     [Header("Configuración de Movimiento")]
     [SerializeField] private float hideDistance = 0.3f;
-    [SerializeField] private float movementSpeed = 5f;
+    [SerializeField] private float movementSpeed = 2f;
+    [SerializeField] private float tiempoEntreMovimientos = 2f;
 
     [Header("Configuración de Estados")]
     [SerializeField] private float tiempoEnfado = 8f;
-    [SerializeField] private float probabilidadDormir = 0.3f;
     [SerializeField] private ParticleSystem particulasSueno;
     [SerializeField] private ParticleSystem particulasEnfado;
 
-    private bool canBeHit = true;
+    private Coroutine movimientoCoroutine;
     private bool isMoving = false;
-    private float tiempoEstadoActual = 0f;
 
     public delegate void OnEstadoChange(EstadoArdilla nuevoEstado, bool estaTrabajando);
     public static event OnEstadoChange EstadoCambiado;
@@ -29,36 +30,61 @@ public class ArdillaGolpe : MonoBehaviour
     void Start() {
         initialPosition = transform.position;
         hiddenPosition = initialPosition + Vector3.down * hideDistance;
-        targetPosition = hiddenPosition;
+
         estadoActual = EstadoArdilla.Trabajando;
-        CambiarEstado(EstadoArdilla.Trabajando, true);
+        transform.position = hiddenPosition;
+        targetPosition = initialPosition;
+        nextPosition = hiddenPosition;
+
+        movimientoCoroutine = StartCoroutine(CicloMovimiento());
+        CambiarEstado(EstadoArdilla.Trabajando, true);        
     }
 
     void Update() {
         if (isMoving) {
-            // Mover suavemente hacia la posición objetivo
-            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * movementSpeed);
+            MoverArdilla();
+        }
+    }
 
-            // Comprobar si hemos llegado lo suficientemente cerca
-            if (Vector3.Distance(transform.position, targetPosition) < 0.01f) {
-                transform.position = targetPosition;
-                isMoving = false;
+    private void MoverArdilla() {
+        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * movementSpeed);
+
+        if (Vector3.Distance(transform.position, targetPosition) < 0.01f) {
+            transform.position = targetPosition;
+            isMoving = false;
+
+            // Solo cambiar estado si llegó al destino trabajando
+            if (estadoActual != EstadoArdilla.Enfadada) {
+                targetPosition = nextPosition;
+                nextPosition = (targetPosition == hiddenPosition) ? initialPosition : hiddenPosition;
             }
         }
+    }
 
-        tiempoEstadoActual += Time.deltaTime;
-        if (estadoActual == EstadoArdilla.Durmiendo && tiempoEstadoActual > 8f) {
-            // Probabilidad de despertar trabajando o seguir durmiendo
-                CambiarEstado(EstadoArdilla.Trabajando);
-            
+    public IEnumerator CicloMovimiento() {
+        yield return new WaitForSeconds(1f);
+        while (true) {
+            if (!isMoving && estadoActual != EstadoArdilla.Enfadada) {
+                isMoving = true;                
+            }
+            yield return new WaitForSeconds(tiempoEntreMovimientos);
         }
     }
 
     public void CambiarEstado(EstadoArdilla nuevoEstado, bool immediate = false) {
         if (estadoActual == nuevoEstado) return;
 
+        // Detener solo si se está enfadando
+        if (nuevoEstado == EstadoArdilla.Enfadada && movimientoCoroutine != null) {
+            StopCoroutine(movimientoCoroutine);
+            movimientoCoroutine = null;
+        }
+        // Reiniciar movimiento si estaba enfadada y ahora no
+        else if (estadoActual == EstadoArdilla.Enfadada && nuevoEstado != EstadoArdilla.Enfadada) {
+            movimientoCoroutine = StartCoroutine(CicloMovimiento());
+        }
+
         estadoActual = nuevoEstado;
-        tiempoEstadoActual = 0f;
 
         bool estaTrabajando = (estadoActual == EstadoArdilla.Trabajando);
         // Manejar partículas
@@ -66,24 +92,24 @@ public class ArdillaGolpe : MonoBehaviour
 
         // Actualizar posición y trabajo
         switch (estadoActual) {
-            case EstadoArdilla.Trabajando:                
-                EstadoCambiado?.Invoke(nuevoEstado, estaTrabajando);
+            case EstadoArdilla.Trabajando:
+                targetPosition = hiddenPosition;
+                nextPosition = initialPosition;                
                 break;
 
             case EstadoArdilla.Durmiendo:
+                if (!isMoving) {
+                    targetPosition = (transform.position == initialPosition) ? hiddenPosition : initialPosition;
+                    nextPosition = (targetPosition == hiddenPosition) ? initialPosition : hiddenPosition;
+                    isMoving = true;
+                }
+                break;
             case EstadoArdilla.Enfadada:
                 targetPosition = initialPosition;
-                EstadoCambiado?.Invoke(nuevoEstado, estaTrabajando);
+                Invoke("CalmarArdilla", tiempoEnfado);
                 break;
         }
-
-        if (immediate) {
-            transform.position = targetPosition;
-            isMoving = false;
-        }
-        else {
-            isMoving = true;
-        }
+        EstadoCambiado?.Invoke(nuevoEstado, estaTrabajando);
     }
 
     private void ManejarParticulas() {
@@ -99,7 +125,6 @@ public class ArdillaGolpe : MonoBehaviour
 
             case EstadoArdilla.Enfadada:
                 if (particulasEnfado != null) particulasEnfado.Play();
-                Invoke("CalmarArdilla", tiempoEnfado);
                 break;
         }
     }
@@ -111,14 +136,14 @@ public class ArdillaGolpe : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (!canBeHit || isMoving) return;
+        if (isMoving) return;
 
         if ((other.CompareTag("LeftHand")) || (other.CompareTag("RightHand"))) {
             switch (estadoActual) {
                 case EstadoArdilla.Durmiendo:
                     // Despertar trabajando
-                    targetPosition = hiddenPosition;
-                    CambiarEstado(EstadoArdilla.Trabajando);
+                    isMoving = true;
+                    CambiarEstado(EstadoArdilla.Trabajando);                    
                     break;
 
                 case EstadoArdilla.Trabajando:

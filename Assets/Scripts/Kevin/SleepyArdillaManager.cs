@@ -9,8 +9,11 @@ public class SleepyArdillaManager : MonoBehaviour
     [SerializeField] private int minArdillasDormir = 1;
     [SerializeField] private int maxArdillasDormir = 3;
 
+    private GameObject[] todasLasArdillas;
+
     void Start()
     {
+        todasLasArdillas = GameObject.FindGameObjectsWithTag("ardilla");
         StartCoroutine(CicloTrabajoDescanso());
     }
 
@@ -20,7 +23,7 @@ public class SleepyArdillaManager : MonoBehaviour
 
         while (true) {
             // Solo intentar dormir ardillas que estén trabajando
-            var ardillasTrabajando = GameObject.FindGameObjectsWithTag("ardilla")
+            var ardillasTrabajando = todasLasArdillas
                 .Select(a => a.GetComponent<ArdillaGolpe>())
                 .Where(a => a.estadoActual == ArdillaGolpe.EstadoArdilla.Trabajando)
                 .ToList();
