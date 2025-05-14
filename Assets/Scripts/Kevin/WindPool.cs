@@ -2,7 +2,11 @@ using System.Collections;
 using UnityEngine;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 public class WindPool : MonoBehaviour
+=======
+public class ParticleController : MonoBehaviour
+>>>>>>> Stashed changes
 =======
 public class ParticleController : MonoBehaviour
 >>>>>>> Stashed changes
