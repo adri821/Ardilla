@@ -1,7 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
+<<<<<<< Updated upstream
 public class WindPool : MonoBehaviour
+=======
+public class ParticleController : MonoBehaviour
+>>>>>>> Stashed changes
 {
     public float intervalo = 10f;        // Tiempo entre cada ciclo completo (debe ser mayor o igual a duracionActiva)
     public float duracionActiva = 9f;    // Tiempo que cada partícula se mantiene activa (Duration + StartLifetime)
