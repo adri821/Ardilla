@@ -11,11 +11,11 @@ public class MolinoMovement : MonoBehaviour
     bool puntuacionCalculada;
     public GameObject panel;
     public Text puntuacionTxt, gofioTxt;
+    public GameObject hands;
 
     void Start()
     {
         puntuacionCalculada = false;
-        timeLeft = 60;
         CantidadGofio = 0;
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
         ArdillaGolpe.EstadoCambiado += ActualizarTrabajoArdilla;
@@ -75,6 +75,7 @@ public class MolinoMovement : MonoBehaviour
 
     private void calcularPuntuacion()
     {
+        hands.GetComponent<ActiveHands>().SetInteractorsActive(true);
         puntuacion = CantidadGofio * 1000;
         panel.SetActive(true);
         Debug.Log(puntuacion);
