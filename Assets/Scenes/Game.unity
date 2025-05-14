@@ -1877,6 +1877,7 @@ GameObject:
   - component: {fileID: 262945108}
   - component: {fileID: 262945107}
   - component: {fileID: 262945106}
+  - component: {fileID: 262945109}
   m_Layer: 0
   m_Name: ArdillaAnimada (8)
   m_TagString: ardilla
@@ -1973,6 +1974,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1348876659}
   particulasEnfado: {fileID: 10948955}
+--- !u!95 &262945109
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262945104}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &266268991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,6 +2118,7 @@ GameObject:
   - component: {fileID: 280158784}
   - component: {fileID: 280158783}
   - component: {fileID: 280158782}
+  - component: {fileID: 280158785}
   m_Layer: 0
   m_Name: ArdillaAnimada (3)
   m_TagString: ardilla
@@ -2191,6 +2215,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1272168117}
   particulasEnfado: {fileID: 36129113}
+--- !u!95 &280158785
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280158780}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &287656987
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,6 +3789,7 @@ GameObject:
   - component: {fileID: 679488736}
   - component: {fileID: 679488735}
   - component: {fileID: 679488734}
+  - component: {fileID: 679488737}
   m_Layer: 0
   m_Name: ArdillaAnimada (2)
   m_TagString: ardilla
@@ -3839,6 +3886,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1116227522}
   particulasEnfado: {fileID: 456869973}
+--- !u!95 &679488737
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679488732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &691267273
 GameObject:
   m_ObjectHideFlags: 0
@@ -5687,6 +5756,34 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0041202833, y: 0.008112797, z: -0.0028494396}
     m_Extent: {x: 0.005397119, y: 0.002293015, z: 0.0012018485}
   m_DirtyAABB: 0
+--- !u!1 &991420644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4543916536125342985, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
+  m_PrefabInstance: {fileID: 8016553611685546525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &991420650
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991420644}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0085
+  m_Height: 0.019
+  m_Direction: 2
+  m_Center: {x: -2.3283067e-10, y: 7.084015e-10, z: 0.008145017}
 --- !u!1 &992846886
 GameObject:
   m_ObjectHideFlags: 0
@@ -8745,6 +8842,7 @@ GameObject:
   - component: {fileID: 1346106292}
   - component: {fileID: 1346106291}
   - component: {fileID: 1346106290}
+  - component: {fileID: 1346106293}
   m_Layer: 0
   m_Name: ArdillaAnimada (6)
   m_TagString: ardilla
@@ -8841,6 +8939,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 923257518}
   particulasEnfado: {fileID: 111404237}
+--- !u!95 &1346106293
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346106288}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1348876658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8939,6 +9059,7 @@ GameObject:
   - component: {fileID: 1355056951}
   - component: {fileID: 1355056950}
   - component: {fileID: 1355056949}
+  - component: {fileID: 1355056952}
   m_Layer: 0
   m_Name: ArdillaAnimada (4)
   m_TagString: ardilla
@@ -9035,6 +9156,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1686275713}
   particulasEnfado: {fileID: 1483412134}
+--- !u!95 &1355056952
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355056947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1359969462
 GameObject:
   m_ObjectHideFlags: 0
@@ -9533,6 +9676,7 @@ GameObject:
   - component: {fileID: 1438795323}
   - component: {fileID: 1438795322}
   - component: {fileID: 1438795321}
+  - component: {fileID: 1438795324}
   m_Layer: 0
   m_Name: ArdillaAnimada (7)
   m_TagString: ardilla
@@ -9629,6 +9773,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1185753727}
   particulasEnfado: {fileID: 1168373431}
+--- !u!95 &1438795324
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438795319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1443233637
 GameObject:
   m_ObjectHideFlags: 0
@@ -9901,6 +10067,7 @@ GameObject:
   - component: {fileID: 1467526834}
   - component: {fileID: 1467526833}
   - component: {fileID: 1467526832}
+  - component: {fileID: 1467526835}
   m_Layer: 0
   m_Name: ArdillaAnimada (5)
   m_TagString: ardilla
@@ -9997,6 +10164,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 97420003}
   particulasEnfado: {fileID: 1618932274}
+--- !u!95 &1467526835
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467526830}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1468701794
 GameObject:
   m_ObjectHideFlags: 0
@@ -11019,7 +11208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0.887
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13554,6 +13743,7 @@ GameObject:
   - component: {fileID: 1948953393}
   - component: {fileID: 1948953392}
   - component: {fileID: 1948953391}
+  - component: {fileID: 1948953394}
   m_Layer: 0
   m_Name: ArdillaAnimada (1)
   m_TagString: ardilla
@@ -13650,6 +13840,28 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 857736417}
   particulasEnfado: {fileID: 205770361}
+--- !u!95 &1948953394
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948953389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1972512265
 GameObject:
   m_ObjectHideFlags: 0
@@ -15927,6 +16139,7 @@ GameObject:
   - component: {fileID: 1428658237998238789}
   - component: {fileID: 7185815265475972777}
   - component: {fileID: 7358631765815892837}
+  - component: {fileID: 7989720033290855049}
   m_Layer: 0
   m_Name: ArdillaAnimada
   m_TagString: ardilla
@@ -16387,6 +16600,28 @@ Transform:
   - {fileID: 5766668552512912603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7989720033290855049
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5595193993887227039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74e132106ed4315429a0efdaa84d3f85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8016553611685546525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16451,10 +16686,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4427460301076879680, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4543916536125342985, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 991420650}
   m_SourcePrefab: {fileID: 100100000, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
 --- !u!1001 &8171651716452185920
 PrefabInstance:
@@ -16508,41 +16747,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sleep
       objectReference: {fileID: 0}
-    - target: {fileID: 3973985188809252745, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: lengthInSec
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.a
-      value: 0.46666667
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

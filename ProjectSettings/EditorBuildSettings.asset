@@ -10,11 +10,11 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/Menu.unity
-    guid: d6632f75f1121dc498e4d98f2e528b70
+    guid: 749539a2062b6844eba088dae6e28f77
   - enabled: 1
     path: Assets/Scenes/MultiPrueba.unity
     guid: c54ffdfdb98aed84282e5651b4806d57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scenario_Prueba_Kevin.unity
     guid: 4c1c96d3d6167bf4aaaed5d5143ed8af
   - enabled: 1

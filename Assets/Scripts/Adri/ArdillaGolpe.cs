@@ -24,10 +24,18 @@ public class ArdillaGolpe : MonoBehaviour
     private Coroutine movimientoCoroutine;
     private bool isMoving = false;
 
+    private Animator animator;
+
     public delegate void OnEstadoChange(EstadoArdilla nuevoEstado, bool estaTrabajando);
     public static event OnEstadoChange EstadoCambiado;
 
     void Start() {
+        animator = GetComponent<Animator>();
+        animator.SetBool("Trabajando", true);
+        animator.SetBool("Durmiendo", false);
+        animator.SetBool("Enfadar", false);
+        animator.SetBool("Despertar", false);
+
         initialPosition = transform.position;
         hiddenPosition = initialPosition + Vector3.down * hideDistance;
 
@@ -74,6 +82,33 @@ public class ArdillaGolpe : MonoBehaviour
     public void CambiarEstado(EstadoArdilla nuevoEstado, bool immediate = false) {
         if (estadoActual == nuevoEstado) return;
 
+        animator.SetBool("Trabajando", false);
+        animator.SetBool("Durmiendo", false);
+        animator.SetBool("Enfadar", false);
+        animator.SetBool("Despertar", false);
+
+        // Manejar transiciones de animación
+        switch (nuevoEstado) {
+            case EstadoArdilla.Trabajando:
+                if (estadoActual == EstadoArdilla.Durmiendo) {
+                    // Secuencia: Durmiendo -> Stun -> Trabajando
+                    animator.SetBool("Despertar", true);
+                    StartCoroutine(TransitionToWorking());
+                }
+                else {
+                    animator.SetBool("Trabajando", true);
+                }
+                break;
+
+            case EstadoArdilla.Durmiendo:
+                animator.SetBool("Durmiendo", true);
+                break;
+
+            case EstadoArdilla.Enfadada:
+                animator.SetBool("Enfadar", true);
+                break;
+        }
+
         // Detener solo si se está enfadando
         if (nuevoEstado == EstadoArdilla.Enfadada && movimientoCoroutine != null) {
             StopCoroutine(movimientoCoroutine);
@@ -110,6 +145,14 @@ public class ArdillaGolpe : MonoBehaviour
                 break;
         }
         EstadoCambiado?.Invoke(nuevoEstado, estaTrabajando);
+    }
+
+    private IEnumerator TransitionToWorking() {
+        // Espera a que termine la animación Stun (ajusta este tiempo según tu animación)
+        yield return new WaitForSeconds(2.0f);
+
+        animator.SetBool("Despertar", false);
+        animator.SetBool("Trabajando", true);
     }
 
     private void ManejarParticulas() {
