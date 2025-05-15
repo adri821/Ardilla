@@ -10,7 +10,7 @@ public class MolinoMovement : MonoBehaviour
     GameObject[] ardillas;
     bool puntuacionCalculada;
     public GameObject panel;
-    public Text puntuacionTxt, gofioTxt;
+    public Text puntuacionTxt, gofioTxt, gofioUI, timeUI;
     public GameObject hands;
 
     void Start()
@@ -28,6 +28,7 @@ public class MolinoMovement : MonoBehaviour
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
+            timeUI.text = ((int)timeLeft).ToString();
             if (ardillasTrabajando > 0)
             {
                 transform.Rotate(Vector3.forward * (rotationSpeed * ardillasTrabajando) * Time.deltaTime, Space.World);
@@ -35,6 +36,7 @@ public class MolinoMovement : MonoBehaviour
         }
         else if (!puntuacionCalculada)
         {
+            timeUI.text = "0";
             StopCoroutine("calcularGofio");
             calcularPuntuacion();
         }
@@ -69,6 +71,7 @@ public class MolinoMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(1F);
             CantidadGofio += ardillasTrabajando * 0.15f;
+            gofioUI.text = ((int)CantidadGofio).ToString();
             Debug.Log($"{CantidadGofio} Kilos de gofio tengo");
         }
     }

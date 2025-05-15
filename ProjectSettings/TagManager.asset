@@ -7,6 +7,8 @@ TagManager:
   - ardilla
   - LeftHand
   - RightHand
+  - RigthHand
+  - arbusto
   layers:
   - Default
   - TransparentFX
