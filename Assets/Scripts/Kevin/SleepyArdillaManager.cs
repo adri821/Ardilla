@@ -13,6 +13,7 @@ public class SleepyArdillaManager : MonoBehaviour
 
     void Start()
     {
+        StopAllCoroutines();
         todasLasArdillas = GameObject.FindGameObjectsWithTag("ardilla");
         StartCoroutine(CicloTrabajoDescanso());
     }

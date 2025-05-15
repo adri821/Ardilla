@@ -15,8 +15,10 @@ public class MolinoMovement : MonoBehaviour
 
     void Start()
     {
+        ardillas = null;
         puntuacionCalculada = false;
         CantidadGofio = 0;
+        StopAllCoroutines();
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
         ArdillaGolpe.EstadoCambiado += ActualizarTrabajoArdilla;
         ardillasTrabajando = GetArdillas();
@@ -51,15 +53,15 @@ public class MolinoMovement : MonoBehaviour
     {
         
         int cantidad = 0;
-
-        foreach (GameObject obj in ardillas)
-        {
-            ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
-            if (comp != null && comp.estadoActual == ArdillaGolpe.EstadoArdilla.Trabajando)
+            foreach (GameObject obj in ardillas)
             {
-                cantidad++;
+                ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
+                if (comp != null && comp.estadoActual == ArdillaGolpe.EstadoArdilla.Trabajando)
+                {
+                    cantidad++;
+                }
             }
-        }
+        
         Debug.Log("Ardillas trabajando: " + cantidad);
         Debug.Log("Velocidad molino: " + (rotationSpeed * cantidad));
         return cantidad;

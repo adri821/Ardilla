@@ -43,6 +43,7 @@ public class ArdillaGolpe : MonoBehaviour
         transform.position = hiddenPosition;
         targetPosition = initialPosition;
         nextPosition = hiddenPosition;
+        StopAllCoroutines();
 
         movimientoCoroutine = StartCoroutine(CicloMovimiento());
         CambiarEstado(EstadoArdilla.Trabajando, true);        
