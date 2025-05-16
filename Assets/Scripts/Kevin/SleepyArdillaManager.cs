@@ -1,60 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SleepyArdillaManager : MonoBehaviour
 {
+    [SerializeField] private float tiempoEntreCambios = 5f;
+    [SerializeField] private int minArdillasDormir = 1;
+    [SerializeField] private int maxArdillasDormir = 3;
+
+    private GameObject[] todasLasArdillas;
+
     void Start()
     {
-        StartCoroutine(DesactivarArdillasCada5Segundos());
+        StopAllCoroutines();
+        todasLasArdillas = GameObject.FindGameObjectsWithTag("ardilla");
+        StartCoroutine(CicloTrabajoDescanso());
     }
 
-    IEnumerator DesactivarArdillasCada5Segundos()
+    IEnumerator CicloTrabajoDescanso()
     {
-        new WaitForSeconds(5f);
-        while (true)
-        {
-            yield return new WaitForSeconds(5f);
-            DesactivarArdillasAleatorias();
-        }
-    }
+        yield return new WaitForSeconds(tiempoEntreCambios);
 
-    void DesactivarArdillasAleatorias()
-    {
-        // 1. Obtener todas las ardillas activas (trabajando == true)
-        GameObject[] todasLasArdillas = GameObject.FindGameObjectsWithTag("ardilla");
-        List<ArdillaTrabajando> ardillasActivas = new List<ArdillaTrabajando>();
+        while (true) {
+            // Solo intentar dormir ardillas que estén trabajando
+            var ardillasTrabajando = todasLasArdillas
+                .Select(a => a.GetComponent<ArdillaGolpe>())
+                .Where(a => a.estadoActual == ArdillaGolpe.EstadoArdilla.Trabajando)
+                .ToList();
 
-        foreach (GameObject obj in todasLasArdillas)
-        {
-            ArdillaTrabajando comp = obj.GetComponent<ArdillaTrabajando>();
-            if (comp != null && comp.trabajando)
-            {
-                ardillasActivas.Add(comp);
+            if (ardillasTrabajando.Count > 0) {
+                int cantidad = Mathf.Min(Random.Range(minArdillasDormir, maxArdillasDormir + 1),
+                                      ardillasTrabajando.Count);
+
+                for (int i = 0; i < cantidad; i++) {
+                    int index = Random.Range(0, ardillasTrabajando.Count);
+                    ardillasTrabajando[index].CambiarEstado(ArdillaGolpe.EstadoArdilla.Durmiendo);
+                    ardillasTrabajando.RemoveAt(index);
+                }
             }
-        }
 
-        // Si no hay ardillas activas, salir
-        if (ardillasActivas.Count == 0)
-        {
-            return;
-        }
-
-        // 2. Elegir un número aleatorio entre 1 y 3
-        int cantidadADejarDeTrabajar = Random.Range(1, 4); // 1 a 3 (exclusivo superior)
-
-        // 4. Si hay menos ardillas activas que el número aleatorio, solo cambia 1
-        if (cantidadADejarDeTrabajar > ardillasActivas.Count)
-        {
-            cantidadADejarDeTrabajar = 1;
-        }
-
-        // 3. Elegir al azar "cantidadADejarDeTrabajar" ardillas y ponerlas en false
-        for (int i = 0; i < cantidadADejarDeTrabajar; i++)
-        {
-            int index = Random.Range(0, ardillasActivas.Count);
-            ardillasActivas[index].SetTrabajando(false);
-            ardillasActivas.RemoveAt(index); // Evitar elegir la misma más de una vez
+            yield return new WaitForSeconds(tiempoEntreCambios);
         }
     }
 }
