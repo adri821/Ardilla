@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Models/Piedra2.fbx.meta
-<<<<<<<< HEAD:Assets/Models/MesaFix.fbx.meta
-guid: 5cc685727ab268e49aeec1cd5e8171ef
-========
-guid: b84031037915c644ebdb853bfe28c501
->>>>>>>> e45af30e46114954edead70d04d2b8a2d9438b3e:Assets/Models/Piedra2.fbx.meta
-=======
 guid: 0d481f81c76372e40b911bb2ef63a4d5
->>>>>>> parent of 2a8b379 (Merge branch 'RamaFusionFinal' of https://github.com/adri821/Ardilla into RamaFusionFinal):Assets/Resources/Prefabs/VallaPiedraConTextura.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
