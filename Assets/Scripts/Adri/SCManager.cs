@@ -14,6 +14,10 @@ public class SCManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void Reload(string sceneName) {
+       // SceneManager.R (sceneName);
+    }
+
     public void ExitGame() {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

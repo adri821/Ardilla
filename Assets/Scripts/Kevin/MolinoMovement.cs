@@ -20,9 +20,10 @@ public class MolinoMovement : MonoBehaviour
         CantidadGofio = 0;
         StopAllCoroutines();
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
+        
+        StartCoroutine("calcularGofio");
         ArdillaGolpe.EstadoCambiado += ActualizarTrabajoArdilla;
         ardillasTrabajando = GetArdillas();
-        StartCoroutine("calcularGofio");
     }
 
     void Update()
