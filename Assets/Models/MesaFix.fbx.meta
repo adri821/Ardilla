@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-=======
 <<<<<<<< HEAD:Assets/Models/MesaFix.fbx.meta
-guid: c408f0c0aaa25a14f9d398c366656e22
+guid: 5171eb21bbd4094438860a098d078db0
 ========
->>>>>>> Stashed changes
 guid: b84031037915c644ebdb853bfe28c501
+>>>>>>>> e45af30e46114954edead70d04d2b8a2d9438b3e:Assets/Models/Piedra2.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
