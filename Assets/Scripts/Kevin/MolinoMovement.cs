@@ -10,20 +10,16 @@ public class MolinoMovement : MonoBehaviour
     GameObject[] ardillas;
     bool puntuacionCalculada;
     public GameObject panel;
-    public Text puntuacionTxt, gofioTxt, gofioUI, timeUI;
-    public GameObject hands;
-
+    public Text puntuacionTxt, gofioTxt;
     void Start()
     {
-        ardillas = null;
         puntuacionCalculada = false;
+        timeLeft = 10;
         CantidadGofio = 0;
-        StopAllCoroutines();
         ardillas = GameObject.FindGameObjectsWithTag("ardilla");
-        
+        ArdillaTrabajando.TrabajandoChange += ContarArdillas;
+        ContarArdillas(true);
         StartCoroutine("calcularGofio");
-        ArdillaGolpe.EstadoCambiado += ActualizarTrabajoArdilla;
-        ardillasTrabajando = GetArdillas();
     }
 
     void Update()
@@ -31,7 +27,6 @@ public class MolinoMovement : MonoBehaviour
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
-            timeUI.text = ((int)timeLeft).ToString();
             if (ardillasTrabajando > 0)
             {
                 transform.Rotate(Vector3.forward * (rotationSpeed * ardillasTrabajando) * Time.deltaTime, Space.World);
@@ -39,13 +34,12 @@ public class MolinoMovement : MonoBehaviour
         }
         else if (!puntuacionCalculada)
         {
-            timeUI.text = "0";
             StopCoroutine("calcularGofio");
             calcularPuntuacion();
         }
     }
 
-    private void ActualizarTrabajoArdilla(ArdillaGolpe.EstadoArdilla nuevoEstado, bool estaTrabajando)
+    private void ContarArdillas(bool trabajando)
     {
         ardillasTrabajando = GetArdillas();
     }
@@ -54,15 +48,15 @@ public class MolinoMovement : MonoBehaviour
     {
         
         int cantidad = 0;
-            foreach (GameObject obj in ardillas)
+
+        foreach (GameObject obj in ardillas)
+        {
+            ArdillaTrabajando comp = obj.GetComponent<ArdillaTrabajando>();
+            if (comp != null && comp.trabajando)
             {
-                ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
-                if (comp != null && comp.estadoActual == ArdillaGolpe.EstadoArdilla.Trabajando)
-                {
-                    cantidad++;
-                }
+                cantidad++;
             }
-        
+        }
         Debug.Log("Ardillas trabajando: " + cantidad);
         Debug.Log("Velocidad molino: " + (rotationSpeed * cantidad));
         return cantidad;
@@ -74,19 +68,17 @@ public class MolinoMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(1F);
             CantidadGofio += ardillasTrabajando * 0.15f;
-            gofioUI.text = ((int)CantidadGofio).ToString();
             Debug.Log($"{CantidadGofio} Kilos de gofio tengo");
         }
     }
 
     private void calcularPuntuacion()
     {
-        hands.GetComponent<ActiveHands>().SetInteractorsActive(true);
         puntuacion = CantidadGofio * 1000;
         panel.SetActive(true);
         Debug.Log(puntuacion);
         puntuacionCalculada = true;
-        gofioTxt.text = $"Kilos de gofio: {CantidadGofio.ToString()}";
+        gofioTxt.text = CantidadGofio.ToString();
         puntuacionTxt.text = puntuacion.ToString();
 
     }
