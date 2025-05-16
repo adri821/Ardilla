@@ -37,7 +37,6 @@ public class SleepyArdillaManager : MonoBehaviour
         // Si no hay ardillas activas, salir
         if (ardillasActivas.Count == 0)
         {
-            Debug.Log("No hay ardillas trabajando.");
             return;
         }
 
@@ -57,6 +56,5 @@ public class SleepyArdillaManager : MonoBehaviour
             ardillasActivas[index].SetTrabajando(false);
             ardillasActivas.RemoveAt(index); // Evitar elegir la misma más de una vez
         }
-        Debug.Log($"Se ha(n) dormido {cantidadADejarDeTrabajar} ardilla(s).");
     }
 }

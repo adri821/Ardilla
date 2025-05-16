@@ -57,8 +57,6 @@ public class MolinoMovement : MonoBehaviour
                 cantidad++;
             }
         }
-        Debug.Log("Ardillas trabajando: " + cantidad);
-        Debug.Log("Velocidad molino: " + (rotationSpeed * cantidad));
         return cantidad;
     }
 
@@ -68,7 +66,6 @@ public class MolinoMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(1F);
             CantidadGofio += ardillasTrabajando * 0.15f;
-            Debug.Log($"{CantidadGofio} Kilos de gofio tengo");
         }
     }
 
@@ -76,10 +73,8 @@ public class MolinoMovement : MonoBehaviour
     {
         puntuacion = CantidadGofio * 1000;
         panel.SetActive(true);
-        Debug.Log(puntuacion);
         puntuacionCalculada = true;
         gofioTxt.text = CantidadGofio.ToString();
         puntuacionTxt.text = puntuacion.ToString();
-
     }
 }
