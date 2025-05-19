@@ -54,6 +54,16 @@ public class ArdillaGolpe : MonoBehaviour
             MoverArdilla();
         }
     }
+    void OnEnable() {
+        // Reiniciar estado al activarse (útil al recargar escena)
+        CambiarEstado(EstadoArdilla.Trabajando, true);
+    }
+
+    void OnDestroy() {
+        // Limpiar cualquier posible suscripción
+        CancelInvoke();
+    }
+
 
     private void MoverArdilla() {
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * movementSpeed);

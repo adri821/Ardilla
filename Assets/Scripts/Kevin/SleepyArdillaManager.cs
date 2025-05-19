@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SleepyArdillaManager : MonoBehaviour
 {
@@ -14,8 +15,21 @@ public class SleepyArdillaManager : MonoBehaviour
     void Start()
     {
         StopAllCoroutines();
-        todasLasArdillas = GameObject.FindGameObjectsWithTag("ardilla");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        InicializarReferencias();
         StartCoroutine(CicloTrabajoDescanso());
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        InicializarReferencias();
+    }
+
+    void InicializarReferencias() {
+        todasLasArdillas = GameObject.FindGameObjectsWithTag("ardilla");
+    }
+
+    void OnDestroy() {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     IEnumerator CicloTrabajoDescanso()

@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MolinoMovement : MonoBehaviour
@@ -19,11 +20,34 @@ public class MolinoMovement : MonoBehaviour
         puntuacionCalculada = false;
         CantidadGofio = 0;
         StopAllCoroutines();
-        ardillas = GameObject.FindGameObjectsWithTag("ardilla");
-        
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        InicializarReferencias();
+
         StartCoroutine("calcularGofio");
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        // Reiniciar referencias cuando se carga una nueva escena
+        InicializarReferencias();
+    }
+
+    void InicializarReferencias() {
+        // Limpiar suscripción previa
+        ArdillaGolpe.EstadoCambiado -= ActualizarTrabajoArdilla;
+
+        // Obtener nuevas referencias
+        ardillas = GameObject.FindGameObjectsWithTag("ardilla");
         ArdillaGolpe.EstadoCambiado += ActualizarTrabajoArdilla;
+
+        // Actualizar contador inicial
         ardillasTrabajando = GetArdillas();
+    }
+
+    void OnDestroy() {
+        // Limpiar suscripciones al destruir el objeto
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        ArdillaGolpe.EstadoCambiado -= ActualizarTrabajoArdilla;
     }
 
     void Update()
