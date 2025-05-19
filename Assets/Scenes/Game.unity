@@ -406,10 +406,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 857736417}
   particulasEnfado: {fileID: 5520946665650849800}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &71177726
 Transform:
   m_ObjectHideFlags: 0
@@ -674,7 +670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: lengthInSec
@@ -2978,10 +2974,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 97420003}
   particulasEnfado: {fileID: 5520946665982407745}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &471403823
 Transform:
   m_ObjectHideFlags: 0
@@ -3467,10 +3459,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1686275713}
   particulasEnfado: {fileID: 5520946666386478293}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &501503138
 Transform:
   m_ObjectHideFlags: 0
@@ -5314,7 +5302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: lengthInSec
@@ -7358,7 +7346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: lengthInSec
@@ -8200,7 +8188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: lengthInSec
@@ -8432,7 +8420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: lengthInSec
@@ -10748,7 +10736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: looping
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5520946665445181040, guid: 7d349e9eb7bb9574789e2a450a3c935b, type: 3}
       propertyPath: lengthInSec
@@ -10993,10 +10981,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1185753727}
   particulasEnfado: {fileID: 5520946666558927046}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &1689953576
 Transform:
   m_ObjectHideFlags: 0
@@ -11321,10 +11305,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 923257518}
   particulasEnfado: {fileID: 5520946665535513276}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &1701623031
 Transform:
   m_ObjectHideFlags: 0
@@ -11608,52 +11588,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.004123303, y: 0.008231841, z: 0.0028379627}
     m_Extent: {x: 0.0053377757, y: 0.0020106155, z: 0.0009897761}
   m_DirtyAABB: 0
---- !u!1 &1726293476
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1726293478}
-  - component: {fileID: 1726293477}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1726293477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726293476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 062d6590405000047b1b3c3a2b118504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxSource: {fileID: 0}
-  musicSource: {fileID: 0}
---- !u!4 &1726293478
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726293476}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7323904, y: 0.84055066, z: -1.6968575}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1738564358
 GameObject:
   m_ObjectHideFlags: 0
@@ -12818,10 +12752,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1348876659}
   particulasEnfado: {fileID: 5520946665434634026}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &1838204959
 Transform:
   m_ObjectHideFlags: 0
@@ -13930,10 +13860,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1116227522}
   particulasEnfado: {fileID: 5520946665324252708}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &2004462338
 Transform:
   m_ObjectHideFlags: 0
@@ -14332,10 +14258,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1272168117}
   particulasEnfado: {fileID: 5520946665476558632}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!4 &2022626317
 Transform:
   m_ObjectHideFlags: 0
@@ -16685,10 +16607,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1631074181}
   particulasEnfado: {fileID: 5520946665634254111}
-  sounds:
-  - {fileID: 8300000, guid: 2c39b4bf9a0eef345a9c6853e23da90c, type: 3}
-  - {fileID: 8300000, guid: 12f9fb89f128e7243925c7424ee55dcf, type: 3}
-  - {fileID: 8300000, guid: 817ff95322bf32346b7291f7115ceff1, type: 3}
 --- !u!82 &3325115194940007743
 AudioSource:
   m_ObjectHideFlags: 0
@@ -61308,7 +61226,6 @@ SceneRoots:
   - {fileID: 1570169152}
   - {fileID: 1261060674}
   - {fileID: 1313510460}
-  - {fileID: 1726293478}
   - {fileID: 970225468}
   - {fileID: 1645503332}
   - {fileID: 1223431442039776841}

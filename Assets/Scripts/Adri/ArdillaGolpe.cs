@@ -1,8 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ArdillaGolpe : MonoBehaviour
-{
+public class ArdillaGolpe : MonoBehaviour {
     public enum EstadoArdilla { Trabajando, Durmiendo, Enfadada }
 
     public EstadoArdilla estadoActual;
@@ -21,12 +20,12 @@ public class ArdillaGolpe : MonoBehaviour
     [SerializeField] private ParticleSystem particulasSueno;
     [SerializeField] private ParticleSystem particulasEnfado;
 
+    private bool estaEnPosicionSuperior = false;
+
     private Coroutine movimientoCoroutine;
     private bool isMoving = false;
 
     private Animator animator;
-
-    public AudioClip[] sounds;
 
     public delegate void OnEstadoChange(EstadoArdilla nuevoEstado, bool estaTrabajando);
     public static event OnEstadoChange EstadoCambiado;
@@ -48,12 +47,26 @@ public class ArdillaGolpe : MonoBehaviour
         StopAllCoroutines();
 
         movimientoCoroutine = StartCoroutine(CicloMovimiento());
-        CambiarEstado(EstadoArdilla.Trabajando, true);        
+        CambiarEstado(EstadoArdilla.Trabajando, true);
     }
 
     void Update() {
         if (isMoving) {
             MoverArdilla();
+        }
+
+        bool ahoraEnSuperior = Vector3.Distance(transform.position, initialPosition) < 0.1f;
+
+        // Solo verificar cambios si el estado es Durmiendo
+        if (estadoActual == EstadoArdilla.Durmiendo) {
+            // Si cambió la posición respecto a la última comprobación
+            if (estaEnPosicionSuperior != ahoraEnSuperior) {
+                estaEnPosicionSuperior = ahoraEnSuperior;
+                ActualizarParticulasSueno();
+            }
+        }
+        else {
+            estaEnPosicionSuperior = false;
         }
     }
     void OnEnable() {
@@ -86,7 +99,7 @@ public class ArdillaGolpe : MonoBehaviour
         yield return new WaitForSeconds(1f);
         while (true) {
             if (!isMoving && estadoActual != EstadoArdilla.Enfadada) {
-                isMoving = true;                
+                isMoving = true;
             }
             yield return new WaitForSeconds(tiempoEntreMovimientos);
         }
@@ -119,7 +132,6 @@ public class ArdillaGolpe : MonoBehaviour
 
             case EstadoArdilla.Enfadada:
                 animator.SetBool("Enfadar", true);
-                AudioSource.PlayClipAtPoint(sounds[2], transform.position);
                 break;
         }
 
@@ -143,7 +155,7 @@ public class ArdillaGolpe : MonoBehaviour
         switch (estadoActual) {
             case EstadoArdilla.Trabajando:
                 targetPosition = hiddenPosition;
-                nextPosition = initialPosition;                
+                nextPosition = initialPosition;
                 break;
 
             case EstadoArdilla.Durmiendo:
@@ -169,6 +181,21 @@ public class ArdillaGolpe : MonoBehaviour
         animator.SetBool("Trabajando", true);
     }
 
+    private void ActualizarParticulasSueno() {
+        if (particulasSueno == null) return;
+
+        if (estaEnPosicionSuperior && estadoActual == EstadoArdilla.Durmiendo) {
+            if (!particulasSueno.isPlaying) {
+                particulasSueno.Play();
+            }
+        }
+        else {
+            if (particulasSueno.isPlaying) {
+                particulasSueno.Stop();
+            }
+        }
+    }
+
     private void ManejarParticulas() {
         // Detener todas las partículas primero
         if (particulasSueno != null) particulasSueno.Stop();
@@ -177,12 +204,6 @@ public class ArdillaGolpe : MonoBehaviour
         // Activar las correspondientes
         switch (estadoActual) {
             case EstadoArdilla.Durmiendo:
-                if (particulasSueno != null && transform.position == initialPosition) {
-                    particulasSueno.Play();
-                }
-                if (particulasSueno != null && transform.position != initialPosition) {
-                    particulasSueno.Stop();
-                }   
                 break;
 
             case EstadoArdilla.Enfadada:
@@ -201,16 +222,17 @@ public class ArdillaGolpe : MonoBehaviour
         if (isMoving) return;
 
         if ((other.CompareTag("LeftHand")) || (other.CompareTag("RightHand"))) {
+            
             switch (estadoActual) {
                 case EstadoArdilla.Durmiendo:
                     // Despertar trabajando
                     isMoving = true;
-                    CambiarEstado(EstadoArdilla.Trabajando);                    
+                    CambiarEstado(EstadoArdilla.Trabajando);
                     break;
 
                 case EstadoArdilla.Trabajando:
                     // Enfadar si está trabajando arriba
-                    if (transform.position == initialPosition) {
+                    if (Vector3.Distance(transform.position, initialPosition) < 0.1f) {
                         CambiarEstado(EstadoArdilla.Enfadada);
                     }
                     break;
@@ -222,3 +244,4 @@ public class ArdillaGolpe : MonoBehaviour
         }
     }
 }
+
