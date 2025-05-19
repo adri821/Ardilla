@@ -26,6 +26,8 @@ public class ArdillaGolpe : MonoBehaviour
 
     private Animator animator;
 
+    public AudioClip[] sounds;
+
     public delegate void OnEstadoChange(EstadoArdilla nuevoEstado, bool estaTrabajando);
     public static event OnEstadoChange EstadoCambiado;
 
@@ -117,6 +119,7 @@ public class ArdillaGolpe : MonoBehaviour
 
             case EstadoArdilla.Enfadada:
                 animator.SetBool("Enfadar", true);
+                AudioSource.PlayClipAtPoint(sounds[2], transform.position);
                 break;
         }
 
@@ -174,7 +177,12 @@ public class ArdillaGolpe : MonoBehaviour
         // Activar las correspondientes
         switch (estadoActual) {
             case EstadoArdilla.Durmiendo:
-                if (particulasSueno != null) particulasSueno.Play();
+                if (particulasSueno != null && transform.position == initialPosition) {
+                    particulasSueno.Play();
+                }
+                if (particulasSueno != null && transform.position != initialPosition) {
+                    particulasSueno.Stop();
+                }   
                 break;
 
             case EstadoArdilla.Enfadada:
