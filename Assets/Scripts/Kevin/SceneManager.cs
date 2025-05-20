@@ -5,13 +5,14 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader _instance;
 
-    private void Awake()
+    public void LoadSceneWithFade(string sceneName)
     {
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+        Fade.LoadScene(sceneName).SetFadeTime(1.5f);
+    }
+
+    public void ReloadScene() {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        Fade.LoadScene(currentSceneName).SetFadeTime (1.5f);
     }
 
     public void LoadScene(string sceneName)
