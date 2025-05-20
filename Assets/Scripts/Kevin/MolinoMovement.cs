@@ -107,11 +107,8 @@ public class MolinoMovement : MonoBehaviour
             if (comp != null) {
                 if (comp.particulasSueno != null) comp.particulasSueno.Stop();
                 if (comp.particulasEnfado != null) comp.particulasEnfado.Stop();
-                comp.isMoving = true;
-                comp.transform.position = Vector3.Lerp(comp.transform.position, comp.initialPosition, Time.deltaTime * comp.movementSpeed);
-                comp.isMoving = false;
                 comp.StopAllCoroutines();
-                
+                comp.transform.position = comp.hiddenPosition;             
             }
         }
         ArdillaGolpe.juegoTerminado = true;

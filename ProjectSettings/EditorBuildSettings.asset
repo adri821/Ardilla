@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Scenario_Prueba_Multi_Kevin.unity
     guid: e318167b30a4fec4c884be284d605dbd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameTestKevin.unity
     guid: 09f35c9da210aff498b22dcc707ee038
   m_configObjects:

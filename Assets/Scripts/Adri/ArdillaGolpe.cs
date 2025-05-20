@@ -225,8 +225,8 @@ public class ArdillaGolpe : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (isMoving) return;
 
-        if ((other.CompareTag("LeftHand")) || (other.CompareTag("RightHand"))) {
-            
+        if ((other.CompareTag("LeftHand") && other.transform.position.y > transform.position.y) || (other.CompareTag("RightHand") && other.transform.position.y > transform.position.y)) { 
+
             switch (estadoActual) {
                 case EstadoArdilla.Durmiendo:
                     // Despertar trabajando
