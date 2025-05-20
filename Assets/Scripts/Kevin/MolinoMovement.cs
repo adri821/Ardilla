@@ -33,6 +33,7 @@ public class MolinoMovement : MonoBehaviour
     }
 
     void InicializarReferencias() {
+        ArdillaGolpe.juegoTerminado = false;
         // Limpiar suscripción previa
         ArdillaGolpe.EstadoCambiado -= ActualizarTrabajoArdilla;
 
@@ -86,9 +87,6 @@ public class MolinoMovement : MonoBehaviour
                     cantidad++;
                 }
             }
-        
-        Debug.Log("Ardillas trabajando: " + cantidad);
-        Debug.Log("Velocidad molino: " + (rotationSpeed * cantidad));
         return cantidad;
     }
 
@@ -99,19 +97,30 @@ public class MolinoMovement : MonoBehaviour
             yield return new WaitForSeconds(1F);
             CantidadGofio += ardillasTrabajando * 0.15f;
             gofioUI.text = ((int)CantidadGofio).ToString();
-            Debug.Log($"{CantidadGofio} Kilos de gofio tengo");
         }
     }
 
     private void calcularPuntuacion()
     {
+        foreach (GameObject obj in ardillas) {
+            ArdillaGolpe comp = obj.GetComponent<ArdillaGolpe>();
+            if (comp != null) {
+                if (comp.particulasSueno != null) comp.particulasSueno.Stop();
+                if (comp.particulasEnfado != null) comp.particulasEnfado.Stop();
+                comp.isMoving = true;
+                comp.transform.position = Vector3.Lerp(comp.transform.position, comp.initialPosition, Time.deltaTime * comp.movementSpeed);
+                comp.isMoving = false;
+                comp.StopAllCoroutines();
+                
+            }
+        }
+        ArdillaGolpe.juegoTerminado = true;
         hands.GetComponent<ActiveHands>().SetInteractorsActive(true);
         puntuacion = CantidadGofio * 1000;
         panel.SetActive(true);
-        Debug.Log(puntuacion);
         puntuacionCalculada = true;
-        gofioTxt.text = $"Kilos de gofio: {CantidadGofio.ToString()}";
-        puntuacionTxt.text = puntuacion.ToString();
+        gofioTxt.text = $"Kilos de gofio: {(int)CantidadGofio}";
+        puntuacionTxt.text = ((int)puntuacion).ToString();
 
     }
 }

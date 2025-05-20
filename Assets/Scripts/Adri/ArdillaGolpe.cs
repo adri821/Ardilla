@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ArdillaGolpe : MonoBehaviour {
     public enum EstadoArdilla { Trabajando, Durmiendo, Enfadada }
+   
+    public static bool juegoTerminado = false;
 
     public EstadoArdilla estadoActual;
     public Vector3 initialPosition;
@@ -12,18 +14,18 @@ public class ArdillaGolpe : MonoBehaviour {
 
     [Header("Configuración de Movimiento")]
     [SerializeField] private float hideDistance = 0.3f;
-    [SerializeField] private float movementSpeed = 2f;
+    [SerializeField] public float movementSpeed = 2f;
     [SerializeField] private float tiempoEntreMovimientos = 2f;
 
     [Header("Configuración de Estados")]
     [SerializeField] private float tiempoEnfado = 8f;
-    [SerializeField] private ParticleSystem particulasSueno;
-    [SerializeField] private ParticleSystem particulasEnfado;
+    [SerializeField] public ParticleSystem particulasSueno;
+    [SerializeField] public ParticleSystem particulasEnfado;
 
     private bool estaEnPosicionSuperior = false;
 
     private Coroutine movimientoCoroutine;
-    private bool isMoving = false;
+    public bool isMoving = false;
 
     private Animator animator;
 
@@ -51,6 +53,8 @@ public class ArdillaGolpe : MonoBehaviour {
     }
 
     void Update() {
+        if (juegoTerminado) return;
+
         if (isMoving) {
             MoverArdilla();
         }
