@@ -800,12 +800,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 402837050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da36f287840be024fabb45b0a3627edb, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d889047d6415e948ae12e8c71abe9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoEntreCambios: 5
   minArdillasDormir: 1
-  maxArdillasDormir: 1
+  maxArdillasDormir: 3
 --- !u!1 &407944450
 GameObject:
   m_ObjectHideFlags: 0
@@ -10343,7 +10343,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1915594668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af54f664478b7034dbe7785b9390d319, type: 3}
+  m_Script: {fileID: 11500000, guid: ab1a2826bf9b16c44a7dcfc3424e1934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   estadoActual: 0
@@ -10355,8 +10355,6 @@ MonoBehaviour:
   tiempoEnfado: 8
   particulasSueno: {fileID: 1112426481}
   particulasEnfado: {fileID: 1743042234}
-  UpCollider: {fileID: 1321944505}
-  DownCollider: {fileID: 780787810}
 --- !u!1001 &1973363145
 PrefabInstance:
   m_ObjectHideFlags: 0
