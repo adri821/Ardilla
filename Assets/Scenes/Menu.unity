@@ -3741,12 +3741,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "Tu tarea como jugador ser\xE1 mantener el molino en marcha golpeando (con
-    cari\xF1o y un mazo) a las ardillas dormilonas para que vuelvan a ponerse a trabajar.
-    Cuanto m\xE1s tiempo est\xE9n activas, m\xE1s gofio producen. Pero cuidado: si
-    las golpeas cuando est\xE1n despiertas, \xA1se enfadan y se paran m\xE1s rato!
-    Sabr\xE1s si una ardilla est\xE1 despierta o dormida por su comportamiento y
-    emoticonos."
+  m_Text: "Tu misi\xF3n es mantener el molino en marcha golpeando a las ardillas
+    dormilonas con amor y un mazo para que vuelvan a trabajar. Cuanto m\xE1s tiempo
+    est\xE9n activas, m\xE1s gofio producen. Pero cuidado: si las golpeas cuando
+    est\xE1n despiertas, \xA1se enfadan y se detienen m\xE1s tiempo! Sabr\xE1s si
+    una ardilla est\xE1 despierta o dormida por su comportamiento y emoticonos."
 --- !u!222 &798441256
 CanvasRenderer:
   m_ObjectHideFlags: 0
