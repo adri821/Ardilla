@@ -31,21 +31,21 @@ public class AudioManager : MonoBehaviour
         // Cargamos los AudioClips en los diccionarios
         LoadSFXClips();
         LoadMusicClips();
-        PlayMusic("ForestBirds");
+        PlayMusic("90");
     }
 
     // Método privado para cargar los efectos de sonido directamente desde las carpetas
     private void LoadSFXClips() {
         // Los recursos (ASSETS) que se cargan en TIEMPO DE EJECUCIÓN DEBEN ESTAR DENTRO de una carpeta denominada /Assets/Resources/SFX
-        sfxClips["Arreglado"] = Resources.Load<AudioClip>("SFX/Arreglado");
-        sfxClips["Herramienta"] = Resources.Load<AudioClip>("SFX/Herramienta");
-        sfxClips["Teleport"] = Resources.Load<AudioClip>("SFX/Teleport");
+        //sfxClips["Arreglado"] = Resources.Load<AudioClip>("SFX/Arreglado");
+        //sfxClips["Herramienta"] = Resources.Load<AudioClip>("SFX/Herramienta");
+        //sfxClips["Teleport"] = Resources.Load<AudioClip>("SFX/Teleport");
     }
 
     // Método privado para cargar la música de fondo directamente desde las carpetas
     private void LoadMusicClips() {
         // Los recursos (ASSETS) que se cargan en TIEMPO DE EJECUCIÓN DEBEN ESTAR DENTRO de una carpeta denominada /Assets/Resources/Music
-        musicClips["ForestBirds"] = Resources.Load<AudioClip>("Music/ForestBirds");
+        musicClips["90"] = Resources.Load<AudioClip>("Music/90");
     }
 
     // Método de la clase singleton para reproducir efectos de sonido
