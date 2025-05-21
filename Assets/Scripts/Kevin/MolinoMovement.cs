@@ -65,6 +65,7 @@ public class MolinoMovement : MonoBehaviour
         else if (!puntuacionCalculada)
         {
             timeUI.text = "0";
+            AudioManager.instance.PlayMusic("results");
             StopCoroutine("calcularGofio");
             calcularPuntuacion();
         }

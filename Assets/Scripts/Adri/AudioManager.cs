@@ -31,7 +31,6 @@ public class AudioManager : MonoBehaviour
         // Cargamos los AudioClips en los diccionarios
         LoadSFXClips();
         LoadMusicClips();
-        PlayMusic("90");
     }
 
     // Método privado para cargar los efectos de sonido directamente desde las carpetas
@@ -46,6 +45,7 @@ public class AudioManager : MonoBehaviour
     private void LoadMusicClips() {
         // Los recursos (ASSETS) que se cargan en TIEMPO DE EJECUCIÓN DEBEN ESTAR DENTRO de una carpeta denominada /Assets/Resources/Music
         musicClips["90"] = Resources.Load<AudioClip>("Music/90");
+        musicClips["results"] = Resources.Load<AudioClip>("Music/results");
     }
 
     // Método de la clase singleton para reproducir efectos de sonido
