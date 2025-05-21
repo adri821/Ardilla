@@ -1308,7 +1308,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -1541,6 +1541,7 @@ GameObject:
   - component: {fileID: 410087041}
   - component: {fileID: 410087040}
   - component: {fileID: 410087042}
+  - component: {fileID: 410087043}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -1651,6 +1652,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &410087043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410087039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1450b8c76500a941ae67a896e6df8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &413541531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2488,7 +2501,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 5289182684144184604, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_text
       value: Text teisofidojsdfsf
@@ -3588,7 +3601,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -3729,7 +3742,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 1
@@ -4886,7 +4899,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 4462709362712937534, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5210,7 +5223,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 5289182684144184604, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_text
       value: Text teisofidojsdfsf
@@ -5452,7 +5465,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 5289182684144184604, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_text
       value: Text teisofidojsdfsf
@@ -5772,7 +5785,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 1
@@ -5785,10 +5798,11 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
   m_Text: "Reglas:\n\n- Las partidas duran 90s.\n\n- Debes ir golpeando con tus martillos
-    a las ardillas que est\xE9n dormidas.\n\n- Si golpeas a una que no estaba dormida
-    la ardilla se enfadar\xE1 y estar\xE1 un tiempo sin trabajar.\n\n- El molino
-    molera gofio mas r\xE1pido o despacio seg\xFAn las ardillas trabajando.\n\n-
-    Tu puntuaci\xF3n final dependera de los kilos de gofio generados.\n"
+    a las ardillas que est\xE9n dormidas.\n\n- Si golpeas a una que no estaba dormida,
+    la ardilla se enfadar\xE1 y dejar\xE1 de trabajar durante un tiempo.\n\n- El
+    molino moler\xE1 gofio m\xE1s r\xE1pido o m\xE1s despacio seg\xFAn la cantidad
+    de ardillas trabajando.\n\n- Tu puntuaci\xF3n final depender\xE1 de los kilos
+    de gofio generados.\n"
 --- !u!222 &1114526052
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5941,7 +5955,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -11021,7 +11035,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -11587,56 +11601,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064443288}
   m_Mesh: {fileID: -4343083925716024342, guid: 91180d371e0be08478e75a1b1c8eb08d, type: 3}
---- !u!1 &2088249100
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2088249102}
-  - component: {fileID: 2088249101}
-  m_Layer: 0
-  m_Name: NubeGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2088249101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088249100}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b12652f05eb2874598bd4fdcb1cbd85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nube: {fileID: 3799100964903903825, guid: 24e1c220ea5f40e40a69476e2655f5ba, type: 3}
-  densidadNube: 0.5
-  aleatoriedad: 10
-  altura: 50
-  separacion: 10
-  maxNubes: 20
---- !u!4 &2088249102
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088249100}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 50, z: -215}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095139752
 GameObject:
   m_ObjectHideFlags: 0
@@ -11946,7 +11910,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -14333,7 +14297,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 5289182684458692540, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_Name
       value: TextButton
@@ -16095,7 +16059,6 @@ SceneRoots:
   - {fileID: 544474171}
   - {fileID: 509216355}
   - {fileID: 714541453}
-  - {fileID: 2088249102}
   - {fileID: 759888394}
   - {fileID: 1847075975}
   - {fileID: 1882599950}
