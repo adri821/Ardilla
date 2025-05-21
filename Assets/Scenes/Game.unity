@@ -177,7 +177,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -1464,7 +1464,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -1520,7 +1520,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 147.05, y: -30.705002}
-  m_SizeDelta: {x: 120, y: 30}
+  m_SizeDelta: {x: 153, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266268993
 MonoBehaviour:
@@ -1543,8 +1543,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1555,7 +1555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Puntuacion final:'
+  m_Text: "PUNTUACI\xD3N FINAL:"
 --- !u!222 &266268994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1787,7 +1787,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -5147,7 +5147,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 25
     m_FontStyle: 3
     m_BestFit: 0
@@ -6999,7 +6999,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 5289182684144184604, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_text
       value: Text teisofidojsdfsf
@@ -10577,7 +10577,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 5289182684144184604, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_text
       value: Text teisofidojsdfsf
@@ -14097,7 +14097,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -16780,7 +16780,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 147.05, y: -110.705}
-  m_SizeDelta: {x: 41, y: 30}
+  m_SizeDelta: {x: 43, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039704642
 MonoBehaviour:
@@ -16803,7 +16803,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+    m_Font: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
@@ -17096,7 +17096,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084951007}
   m_LocalRotation: {x: -0, y: -0.79335344, z: 0, w: -0.60876137}
-  m_LocalPosition: {x: 0, y: 0, z: 0.559}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5428}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17106,7 +17106,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1.25, y: 1.078}
-  m_SizeDelta: {x: 365.5913, y: 148.4818}
+  m_SizeDelta: {x: 348.8125, y: 148.4818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2093583005
 GameObject:
@@ -19867,7 +19867,7 @@ PrefabInstance:
     - target: {fileID: 3356991306335605903, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: 5a70bf8bcfd215749ae9d72a8b9216e8, type: 3}
+      objectReference: {fileID: 12800000, guid: aab046b233667694bb6166b8d2667ca6, type: 3}
     - target: {fileID: 5289182684458692540, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_Name
       value: TextButton
