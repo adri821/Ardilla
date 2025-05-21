@@ -16,6 +16,7 @@ public class GoatBehaviour : MonoBehaviour
 
     [Header("Referencias")]
     public Animator goatAnimator;
+    public AudioSource sfxSource;
 
     private NavMeshAgent navAgent;
     private Vector3 currentDestination;
@@ -56,6 +57,7 @@ public class GoatBehaviour : MonoBehaviour
                 }
                 else {
                     // Solo espera idle
+                    sfxSource.Play();
                     yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
                 }
 
@@ -70,7 +72,7 @@ public class GoatBehaviour : MonoBehaviour
             0,
             Random.Range(minBounds.y, maxBounds.y)
         );
-
+        
         navAgent.SetDestination(currentDestination);
     }
 }
