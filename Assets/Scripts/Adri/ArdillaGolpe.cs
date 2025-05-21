@@ -32,6 +32,9 @@ public class ArdillaGolpe : MonoBehaviour {
     public delegate void OnEstadoChange(EstadoArdilla nuevoEstado, bool estaTrabajando);
     public static event OnEstadoChange EstadoCambiado;
 
+    // Variable control Golpe direccion
+    [SerializeField] private float umbralAltura = 1.0f;
+
     void Start() {
         animator = GetComponent<Animator>();
         animator.SetBool("Trabajando", true);
@@ -225,8 +228,10 @@ public class ArdillaGolpe : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (isMoving) return;
 
-        if ((other.CompareTag("LeftHand")) || (other.CompareTag("RightHand"))) {
-            
+        float diferenciaAltura = other.transform.position.y - transform.position.y;
+
+        if ((other.CompareTag("LeftHand") && diferenciaAltura > umbralAltura) || (other.CompareTag("RightHand") && diferenciaAltura > umbralAltura)) { 
+
             switch (estadoActual) {
                 case EstadoArdilla.Durmiendo:
                     // Despertar trabajando
