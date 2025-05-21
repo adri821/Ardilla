@@ -10656,83 +10656,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1765241171}
   m_SourcePrefab: {fileID: 100100000, guid: bf59ae628157d8d4080789431c06451e, type: 3}
---- !u!1001 &1919380760
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.07249797
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.07249797
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.07249797
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.029
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.291
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.762
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_Name
-      value: Pizarra
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8ac7fe57acb216941b93f7be0a3fb33b, type: 3}
 --- !u!1001 &1922999764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11452,11 +11375,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nube: {fileID: 3799100964903903825, guid: 24e1c220ea5f40e40a69476e2655f5ba, type: 3}
-  ancho: 10
-  largo: 10
-  densidad: 0.5
-  ruido: 10
+  densidadNube: 0.5
+  aleatoriedad: 10
   altura: 50
+  separacion: 10
 --- !u!4 &2088249102
 Transform:
   m_ObjectHideFlags: 0
@@ -15941,7 +15863,6 @@ SceneRoots:
   - {fileID: 201149596}
   - {fileID: 2095139754}
   - {fileID: 871441240}
-  - {fileID: 1919380760}
   - {fileID: 1297766868}
   - {fileID: 253541076}
   - {fileID: 1977799117}
