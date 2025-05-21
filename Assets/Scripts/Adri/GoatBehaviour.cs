@@ -46,7 +46,7 @@ public class GoatBehaviour : MonoBehaviour
                 goatAnimator.SetBool("IsWalking", false);
 
                 // Decidir si come o solo se queda idle
-                if (Random.value > 0.7f) // 30% de probabilidad de comer
+                if (Random.value > 0.5f) // 50% de probabilidad de comer
                 {
                     isEating = true;
                     goatAnimator.SetBool("IsEating", true);
@@ -72,21 +72,5 @@ public class GoatBehaviour : MonoBehaviour
         );
 
         navAgent.SetDestination(currentDestination);
-    }
-
-    // Dibujar Gizmos para ver el área de movimiento en el editor
-    void OnDrawGizmosSelected() {
-        Gizmos.color = Color.green;
-        Vector3 center = new Vector3(
-            (minBounds.x + maxBounds.x) / 2,
-            0,
-            (minBounds.y + maxBounds.y) / 2
-        );
-        Vector3 size = new Vector3(
-            maxBounds.x - minBounds.x,
-            0.1f,
-            maxBounds.y - minBounds.y
-        );
-        Gizmos.DrawWireCube(center, size);
     }
 }

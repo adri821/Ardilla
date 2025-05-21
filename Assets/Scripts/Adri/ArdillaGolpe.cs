@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class ArdillaGolpe : MonoBehaviour {
     public enum EstadoArdilla { Trabajando, Durmiendo, Enfadada }
@@ -11,6 +13,12 @@ public class ArdillaGolpe : MonoBehaviour {
     public Vector3 hiddenPosition;
     private Vector3 targetPosition;
     private Vector3 nextPosition;
+
+    [Header("Haptic Feedback")]
+    [SerializeField] private float hapticIntensity = 0.5f;
+    [SerializeField] private float hapticDuration = 0.2f;
+
+    private SonidoArdilla sonido;
 
     [Header("Configuración de Movimiento")]
     [SerializeField] private float hideDistance = 0.3f;
@@ -36,6 +44,7 @@ public class ArdillaGolpe : MonoBehaviour {
     [SerializeField] private float umbralAltura = 1.0f;
 
     void Start() {
+        sonido = GetComponent<SonidoArdilla>();
         animator = GetComponent<Animator>();
         animator.SetBool("Trabajando", true);
         animator.SetBool("Durmiendo", false);
@@ -230,19 +239,29 @@ public class ArdillaGolpe : MonoBehaviour {
 
         float diferenciaAltura = other.transform.position.y - transform.position.y;
 
-        if ((other.CompareTag("LeftHand") && diferenciaAltura > umbralAltura) || (other.CompareTag("RightHand") && diferenciaAltura > umbralAltura)) { 
+        if ((other.CompareTag("LeftHand") && diferenciaAltura > umbralAltura) || (other.CompareTag("RightHand") && diferenciaAltura > umbralAltura)) {
+            sonido.PlayHands("GolpeMartillo");
+
+            //XRBaseInputInteractor
+            XRBaseInputInteractor controller = GetControllerFromCollider(other);
+
+            if (controller != null) {
+                controller.SendHapticImpulse(hapticIntensity, hapticDuration);
+            }
 
             switch (estadoActual) {
                 case EstadoArdilla.Durmiendo:
                     // Despertar trabajando
                     isMoving = true;
                     CambiarEstado(EstadoArdilla.Trabajando);
+                    sonido.PlaySFX("GolpeArdillaDormida");
                     break;
 
                 case EstadoArdilla.Trabajando:
                     // Enfadar si está trabajando arriba
                     if (Vector3.Distance(transform.position, initialPosition) < 0.1f) {
                         CambiarEstado(EstadoArdilla.Enfadada);
+                        sonido.PlaySFX("ArdillaEnfadada");
                     }
                     break;
 
@@ -251,6 +270,24 @@ public class ArdillaGolpe : MonoBehaviour {
                     break;
             }
         }
+    }
+
+    private XRBaseInputInteractor GetControllerFromCollider(Collider col) {
+        // Buscar el controlador en la jerarquía del objeto que colisionó
+        XRBaseInputInteractor controller = col.GetComponentInParent<XRBaseInputInteractor>();
+
+        // Si no se encuentra, intentar otra forma de localizarlo
+        if (controller == null) {
+            // Alternativa para XR Origin setups estándar
+            if (col.CompareTag("LeftHand")) {
+                controller = GameObject.Find("Left Controller")?.GetComponent<XRBaseInputInteractor>();
+            }
+            else if (col.CompareTag("RightHand")) {
+                controller = GameObject.Find("Right Controller")?.GetComponent<XRBaseInputInteractor>();
+            }
+        }
+
+        return controller;
     }
 }
 
