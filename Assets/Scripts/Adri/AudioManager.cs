@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour
         // Los recursos (ASSETS) que se cargan en TIEMPO DE EJECUCIÓN DEBEN ESTAR DENTRO de una carpeta denominada /Assets/Resources/SFX
         //sfxClips["Arreglado"] = Resources.Load<AudioClip>("SFX/Arreglado");
         //sfxClips["Herramienta"] = Resources.Load<AudioClip>("SFX/Herramienta");
-        sfxClips["click"] = Resources.Load<AudioClip>("SFX/ui-positive-click-gfx-sounds-1-00-00");
+        sfxClips["Click"] = Resources.Load<AudioClip>("SFX/Click");
     }
 
     // Método privado para cargar la música de fondo directamente desde las carpetas
