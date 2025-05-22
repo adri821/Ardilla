@@ -63428,7 +63428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 30
   CantidadGofio: 0
-  timeLeft: 15
+  timeLeft: 90
   puntuacion: 0
   panel: {fileID: 4059576350342570352}
   puntuacionTxt: {fileID: 708069992}
