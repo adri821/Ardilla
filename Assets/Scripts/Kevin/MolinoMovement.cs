@@ -11,7 +11,7 @@ public class MolinoMovement : MonoBehaviour
     GameObject[] ardillas;
     bool puntuacionCalculada;
     public GameObject panel;
-    public Text puntuacionTxt, gofioTxt, gofioUI, timeUI;
+    public TextMeshProUGUI puntuacionTxt, gofioTxt, gofioUI, timeUI;
     public GameObject hands;
 
     void Start()
