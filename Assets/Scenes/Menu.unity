@@ -399,11 +399,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79821202}
   m_Mesh: {fileID: 3094369274705038705, guid: 91180d371e0be08478e75a1b1c8eb08d, type: 3}
---- !u!1 &105888472 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5289182684458692540, guid: e5db301629853dd4a99835fa70099d79, type: 3}
-  m_PrefabInstance: {fileID: 963585186}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &118869367
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +705,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Por aqui los colabodadores
+  m_text: 'Inspector
+
+    tim.kahn
+
+    Soup_UnderScore
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}
   m_sharedMaterial: {fileID: -5144578320629979054, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}
@@ -775,7 +777,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -66.05285, z: 0, w: -69.950935}
+  m_margin: {x: -48.504295, y: -46.2265, z: -47.062378, w: -69.950935}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5053,7 +5055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE9ditos"
+  m_text: "Cr\xE9ditos Colaboradores"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}
   m_sharedMaterial: {fileID: -5144578320629979054, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}
@@ -5118,7 +5120,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -61.742012, z: 0, w: 60.29797}
+  m_margin: {x: 0, y: -49.226883, z: 0, w: 60.29797}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5376,18 +5378,13 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 963585188}
   m_SourcePrefab: {fileID: 100100000, guid: e5db301629853dd4a99835fa70099d79, type: 3}
---- !u!224 &963585187 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5289182684458692541, guid: e5db301629853dd4a99835fa70099d79, type: 3}
-  m_PrefabInstance: {fileID: 963585186}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &963585188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105888472}
+  m_GameObject: {fileID: 5289182684841610014}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fd97c119ccdd49488140caedd62f151, type: 3}
@@ -5428,7 +5425,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1334721091}
+  m_Father: {fileID: 2482363002901484242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7960,11 +7957,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc1c548fea05e14baa3b912810162e7, type: 3}
---- !u!224 &1334721091 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2482363001952073328, guid: e5db301629853dd4a99835fa70099d79, type: 3}
-  m_PrefabInstance: {fileID: 963585186}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1352282993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -8070,19 +8062,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359042437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -11.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1474463851}
   - {fileID: 1948126964}
-  - {fileID: 963585187}
+  - {fileID: 5289182684841610015}
   m_Father: {fileID: 1489791723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 294.1, y: 311.9}
+  m_SizeDelta: {x: 347.33, y: 351.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359042439
 MonoBehaviour:
@@ -8899,7 +8891,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -60.883698, z: 0, w: 56.76318}
+  m_margin: {x: 0, y: -40.221153, z: 0, w: 34.02931}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10190,8 +10182,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10228,7 +10220,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -104.63321, z: 0, w: -108.75058}
+  m_margin: {x: -0.9269638, y: -120.1741, z: -24.125092, w: -118.28883}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10392,7 +10384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5944131804917401860, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6499517531677593257, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
@@ -10840,7 +10832,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10871,7 +10863,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -98.57416, z: 0, w: -104.93935}
+  m_margin: {x: -74.56508, y: -88.8502, z: -62.54724, w: -94.05577}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12465,7 +12457,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948126963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12474,7 +12466,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 154.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948126965
 MonoBehaviour:
@@ -12496,7 +12488,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nuestros nombres y colabodadores
+  m_text: "Programadores:\nChristian Alexander Moreno Verdugo (SFX)\nAdri\xE1n Rodr\xEDguez
+    Naranjo \nJoaqu\xEDn Hern\xE1ndez Torres \nManuel Rodr\xEDguez C\xE1ceres \nKevin
+    Gonz\xE1lez Vera\n\nModeladores:\nJoaqu\xEDn Hern\xE1ndez Torres \nManuel Rodr\xEDguez
+    C\xE1ceres \n\nM\xFAsico:\nLuis de la Cueva Jim\xE9nez"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}
   m_sharedMaterial: {fileID: -5144578320629979054, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}
@@ -12523,14 +12518,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 32
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -12561,7 +12556,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -68.50463, z: 0, w: -21.796467}
+  m_margin: {x: 2.3770294, y: -40.154045, z: -3.2770538, w: -4.088333}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13519,7 +13514,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9501298, z: -0, w: 0.31185466}
   m_LocalPosition: {x: -0.8235138, y: 1.3324, z: -0.10519376}
-  m_LocalScale: {x: 0.062580556, y: 0.062580556, z: 0.062580556}
+  m_LocalScale: {x: 0.062580556, y: 0.062580556, z: 0.0425141}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8879528567541442321}
@@ -14442,6 +14437,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8894877328320163929}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &2482363002901484242 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2482363001952073328, guid: e5db301629853dd4a99835fa70099d79, type: 3}
+  m_PrefabInstance: {fileID: 963585186}
+  m_PrefabAsset: {fileID: 0}
 --- !u!137 &2542169271380865374
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -15959,6 +15959,16 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5289182684458692541, guid: e5db301629853dd4a99835fa70099d79, type: 3}
   m_PrefabInstance: {fileID: 5078852580989980016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5289182684841610014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5289182684458692540, guid: e5db301629853dd4a99835fa70099d79, type: 3}
+  m_PrefabInstance: {fileID: 963585186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &5289182684841610015 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5289182684458692541, guid: e5db301629853dd4a99835fa70099d79, type: 3}
+  m_PrefabInstance: {fileID: 963585186}
   m_PrefabAsset: {fileID: 0}
 --- !u!33 &5334037118629455199
 MeshFilter:
