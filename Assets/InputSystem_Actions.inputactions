@@ -36,7 +36,7 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "Hold",
                     "initialStateCheck": false
@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Vibration",
+                    "type": "Value",
+                    "id": "d0d6c797-cb73-4f5f-afe6-1194650f83e4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -470,6 +479,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6fcd5aef-f358-4c38-9be8-9f7a2c9ac54f",
+                    "path": "<XRController>/haptic",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR",
+                    "action": "Vibration",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
