@@ -21,6 +21,7 @@ public class GoatBehaviour : MonoBehaviour
     private NavMeshAgent navAgent;
     private Vector3 currentDestination;
     private bool isEating = false;
+    private bool isInAction = false;
 
     void Start() {
         navAgent = GetComponent<NavMeshAgent>();
@@ -31,17 +32,24 @@ public class GoatBehaviour : MonoBehaviour
 
     IEnumerator RandomBehaviourRoutine() {
         while (true) {
+            while (isInAction) {
+                yield return null;
+            }
             // Elegir un comportamiento aleatorio: caminar o quedarse quieto
             if (Random.value > 0.5f) {
+                isInAction = true;
                 // Comportamiento: Caminar
-                SetRandomDestination();
                 goatAnimator.SetBool("IsEating", false);
                 goatAnimator.SetBool("IsWalking", true);
+                SetRandomDestination();                
 
                 // Caminar por un tiempo aleatorio
                 yield return new WaitForSeconds(Random.Range(minWalkTime, maxWalkTime));
+                isInAction = false;
             }
             else {
+                isInAction = true;
+
                 // Comportamiento: Quedarse quieto
                 navAgent.isStopped = true;
                 goatAnimator.SetBool("IsWalking", false);
@@ -62,6 +70,7 @@ public class GoatBehaviour : MonoBehaviour
                 }
 
                 navAgent.isStopped = false;
+                isInAction = false;
             }
         }
     }
