@@ -26,8 +26,21 @@ public class GoatBehaviour : MonoBehaviour
     void Start() {
         navAgent = GetComponent<NavMeshAgent>();
         goatAnimator = GetComponent<Animator>();
-
+        navAgent.updateRotation = false;
         StartCoroutine(RandomBehaviourRoutine());
+    }
+
+    void Update() {
+        if (navAgent.velocity.sqrMagnitude > 0.1f) {
+            Quaternion lookRotation = Quaternion.LookRotation(navAgent.velocity.normalized);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        }
+    }
+
+    void LateUpdate() {
+        // Evitar inclinación lateral
+        Vector3 rotation = transform.eulerAngles;
+        transform.rotation = Quaternion.Euler(0, rotation.y, 0);
     }
 
     IEnumerator RandomBehaviourRoutine() {
