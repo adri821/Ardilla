@@ -43,6 +43,9 @@ public class ArdillaGolpe : MonoBehaviour {
     // Variable control Golpe direccion
     [SerializeField] private float umbralAltura = 1.0f;
 
+    // Molino script
+    [SerializeField] private MolinoMovement Puntuacion;
+
     void Start() {
         sonido = GetComponent<SonidoArdilla>();
         animator = GetComponent<Animator>();
@@ -262,11 +265,12 @@ public class ArdillaGolpe : MonoBehaviour {
                     if (Vector3.Distance(transform.position, initialPosition) < 0.1f) {
                         CambiarEstado(EstadoArdilla.Enfadada);
                         sonido.PlaySFX("ArdillaEnfadada");
+                        Puntuacion.restarPuntos();
                     }
                     break;
 
                 case EstadoArdilla.Enfadada:
-                    // No hacer nada si ya está enfadada
+                    Puntuacion.restarPuntos();
                     break;
             }
         }

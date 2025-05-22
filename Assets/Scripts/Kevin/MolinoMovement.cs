@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MolinoMovement : MonoBehaviour
 {
-    public float rotationSpeed, CantidadGofio, timeLeft, puntuacion;
+    public float rotationSpeed, CantidadGofio, timeLeft, puntuacion, PuntosNegativos;
     private int ardillasTrabajando;
     GameObject[] ardillas;
     bool puntuacionCalculada;
@@ -19,6 +19,7 @@ public class MolinoMovement : MonoBehaviour
         ardillas = null;
         puntuacionCalculada = false;
         CantidadGofio = 0;
+        PuntosNegativos = 0;
         StopAllCoroutines();
         SceneManager.sceneLoaded += OnSceneLoaded;
 
@@ -115,10 +116,16 @@ public class MolinoMovement : MonoBehaviour
         ArdillaGolpe.juegoTerminado = true;
         hands.GetComponent<ActiveHands>().SetInteractorsActive(true);
         puntuacion = CantidadGofio * 1000;
+        puntuacion -= PuntosNegativos;
         panel.SetActive(true);
         puntuacionCalculada = true;
         gofioTxt.text = $"Kilos de gofio: {(int)CantidadGofio}";
         puntuacionTxt.text = ((int)puntuacion).ToString();
 
+    }
+
+    public void restarPuntos()
+    {
+        PuntosNegativos += 1000;
     }
 }

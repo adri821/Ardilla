@@ -469,6 +469,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665650849800}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &71177726
 Transform:
   m_ObjectHideFlags: 0
@@ -3707,6 +3708,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665982407745}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &471403823
 Transform:
   m_ObjectHideFlags: 0
@@ -4309,6 +4311,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946666386478293}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &501503138
 Transform:
   m_ObjectHideFlags: 0
@@ -13281,6 +13284,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946666558927046}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &1689953576
 Transform:
   m_ObjectHideFlags: 0
@@ -13722,6 +13726,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665535513276}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &1701623031
 Transform:
   m_ObjectHideFlags: 0
@@ -15613,6 +15618,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665434634026}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &1838204959
 Transform:
   m_ObjectHideFlags: 0
@@ -16838,6 +16844,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665324252708}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &2004462338
 Transform:
   m_ObjectHideFlags: 0
@@ -17353,6 +17360,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665476558632}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &2022626317
 Transform:
   m_ObjectHideFlags: 0
@@ -19825,6 +19833,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665634254111}
   isMoving: 0
   umbralAltura: 0.1
+  Puntuacion: {fileID: 7706233140928885092}
 --- !u!82 &3325115194940007743
 AudioSource:
   m_ObjectHideFlags: 0
@@ -64264,6 +64273,7 @@ MonoBehaviour:
   CantidadGofio: 0
   timeLeft: 90
   puntuacion: 0
+  PuntosNegativos: 0
   panel: {fileID: 4059576350342570352}
   puntuacionTxt: {fileID: 96349682}
   gofioTxt: {fileID: 1100225870}
