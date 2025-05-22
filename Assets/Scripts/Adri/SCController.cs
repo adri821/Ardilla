@@ -9,13 +9,13 @@ public class SCController : MonoBehaviour
         if (scene.Equals("Menu")) {
             AudioManager.instance.PlayMusic("results");
         }
-        SCManager.instance.LoadScene(scene);
+        Fade.LoadScene(scene).SetFadeTime(1f);
     }
 
     public void ReloadScene(string scene) {
         AudioManager.instance.PlayMusic("90");
         ArdillaGolpe.EstadoCambiado -= null;
-        SCManager.instance.LoadScene(scene);
+        Fade.LoadScene(scene).SetFadeTime(1f);
     }
 
     public void ExitGame() {
