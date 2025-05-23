@@ -35,6 +35,7 @@ public class ArdillaGolpe : MonoBehaviour {
     [SerializeField] private float tiempoEnfado = 8f;
     [SerializeField] public ParticleSystem particulasSueno;
     [SerializeField] public ParticleSystem particulasEnfado;
+    public ParticleSystem golpeEstrellas;
 
     private bool estaEnPosicionSuperior = false;
 
@@ -263,6 +264,7 @@ public class ArdillaGolpe : MonoBehaviour {
                     CambiarEstado(EstadoArdilla.Trabajando);
                     sonido.PlaySFX("GolpeArdillaDormida");
                     controller.SendHapticImpulse(amplitude, duration);
+                    golpeEstrellas.Play();
                     break;
 
                 case EstadoArdilla.Trabajando:
@@ -272,12 +274,14 @@ public class ArdillaGolpe : MonoBehaviour {
                         sonido.PlaySFX("ArdillaEnfadada");
                         Puntuacion.restarPuntos();
                         controller.SendHapticImpulse(amplitude, duration);
+                        golpeEstrellas.Play();
                     }
                     break;
 
                 case EstadoArdilla.Enfadada:
                     Puntuacion.restarPuntos();
                     controller.SendHapticImpulse(amplitude, duration);
+                    golpeEstrellas.Play();
                     break;
             }
         }
