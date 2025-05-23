@@ -28,8 +28,7 @@ public class TransicionScript : MonoBehaviour
     IEnumerator LogoGrupo3() {
         yield return new WaitForSeconds(3f);
         this.gameObject.GetComponent<SpriteRenderer>().sprite = Logo3;
+        yield return new WaitForSeconds(1f);
         Fade.LoadScene("Menu").SetFadeTime(1f);
     }
-
-
 }
