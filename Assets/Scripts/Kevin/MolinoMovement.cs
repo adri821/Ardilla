@@ -98,7 +98,7 @@ public class MolinoMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(1F);
             CantidadGofio += ardillasTrabajando * 0.15f;
-            gofioUI.text = ((int)CantidadGofio).ToString();
+            gofioUI.text = $"{(int)CantidadGofio} Kilos";
         }
     }
 
