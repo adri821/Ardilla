@@ -1,7 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using static UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics.HapticsUtility;
 
 public class ArdillaGolpe : MonoBehaviour {
     public enum EstadoArdilla { Trabajando, Durmiendo, Enfadada }
@@ -15,8 +19,10 @@ public class ArdillaGolpe : MonoBehaviour {
     private Vector3 nextPosition;
 
     [Header("Haptic Feedback")]
-    [SerializeField] private float hapticIntensity = 0.5f;
-    [SerializeField] private float hapticDuration = 0.2f;
+    public ActionBasedController controllerLeft;
+    public ActionBasedController controllerRight;
+    [Range(0f, 1f)] public float amplitude = 0.9f;
+    public float duration = 0.3f;
 
     private SonidoArdilla sonido;
 
@@ -245,12 +251,10 @@ public class ArdillaGolpe : MonoBehaviour {
         if ((other.CompareTag("LeftHand") && diferenciaAltura > umbralAltura) || (other.CompareTag("RightHand") && diferenciaAltura > umbralAltura)) {
             sonido.PlayHands("GolpeMartillo");
 
-            //XRBaseInputInteractor
-            XRBaseInputInteractor controller = GetControllerFromCollider(other);
+            //SendHapticFromObject(other.gameObject);
+            // controller.SendHapticImpulse(amplitude, duration);
 
-            if (controller != null) {
-                controller.SendHapticImpulse(hapticIntensity, hapticDuration);
-            }
+            var controller = other.CompareTag("LeftHand") ? controllerLeft : controllerRight;
 
             switch (estadoActual) {
                 case EstadoArdilla.Durmiendo:
@@ -258,6 +262,7 @@ public class ArdillaGolpe : MonoBehaviour {
                     isMoving = true;
                     CambiarEstado(EstadoArdilla.Trabajando);
                     sonido.PlaySFX("GolpeArdillaDormida");
+                    controller.SendHapticImpulse(amplitude, duration);
                     break;
 
                 case EstadoArdilla.Trabajando:
@@ -266,32 +271,82 @@ public class ArdillaGolpe : MonoBehaviour {
                         CambiarEstado(EstadoArdilla.Enfadada);
                         sonido.PlaySFX("ArdillaEnfadada");
                         Puntuacion.restarPuntos();
+                        controller.SendHapticImpulse(amplitude, duration);
                     }
                     break;
 
                 case EstadoArdilla.Enfadada:
                     Puntuacion.restarPuntos();
+                    controller.SendHapticImpulse(amplitude, duration);
                     break;
             }
         }
     }
 
-    private XRBaseInputInteractor GetControllerFromCollider(Collider col) {
-        // Buscar el controlador en la jerarquía del objeto que colisionó
-        XRBaseInputInteractor controller = col.GetComponentInParent<XRBaseInputInteractor>();
+    //private void SendHapticFromObject(GameObject hitObject)
+    //{
+    //    // Subir en la jerarquía hasta encontrar un XRController o acceder al InputDevice por nombre
+    //    var controller = hitObject.GetComponentInParent<XRBaseController>();
+    //    if (controller != null)
+    //    {
+    //        controller.SendHapticImpulse(hapticIntensity, hapticDuration);
+    //        return;
+    //    }
 
-        // Si no se encuentra, intentar otra forma de localizarlo
-        if (controller == null) {
-            // Alternativa para XR Origin setups estándar
-            if (col.CompareTag("LeftHand")) {
-                controller = GameObject.Find("Left Controller")?.GetComponent<XRBaseInputInteractor>();
-            }
-            else if (col.CompareTag("RightHand")) {
-                controller = GameObject.Find("Right Controller")?.GetComponent<XRBaseInputInteractor>();
-            }
-        }
+    //    // Si no se encontró, obtener el InputDevice según el lado
+    //    if (hitObject.name.Contains("Left"))
+    //    {
+    //        var device = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+    //        if (device.isValid && device.TryGetHapticCapabilities(out HapticCapabilities capabilities) && capabilities.supportsImpulse)
+    //        {
+    //            device.SendHapticImpulse(0, hapticIntensity, hapticDuration);
+    //        }
+    //    }
+    //    else if (hitObject.name.Contains("Right"))
+    //    {
+    //        var device = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+    //        if (device.isValid && device.TryGetHapticCapabilities(out HapticCapabilities capabilities) && capabilities.supportsImpulse)
+    //        {
+    //            device.SendHapticImpulse(0, hapticIntensity, hapticDuration);
+    //        }
+    //    }
+    //}
+    //public InputAction hapticAction;
+    //public float duration = 0.1f;
+    //public float amplitude = 0.5f;
+    //public float frequency = 0.0f;
 
-        return controller;
-    }
+    //private void OnDisable()
+    //{
+    //    hapticAction.Disable();
+    //}
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    // Detectar si el objeto que colisionó tiene un dispositivo XR
+    //    var device = collision.gameObject.GetComponent<UnityEngine.XR.InputDevice>();
+    //    if (device == null)
+    //    {
+    //        // Intentar encontrar un controlador cercano
+    //        var xrControllers = InputSystem.ListEnabledDevices<XRController>();
+    //        foreach (var controller in xrControllers)
+    //        {
+    //            // Puedes añadir lógica para determinar si está suficientemente cerca
+    //            SendHapticImpulse(controller);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        SendHapticImpulse(device);
+    //    }
+    //}
+
+    //private void SendHapticImpulse(InputDevice device)
+    //{
+    //    if (device is XRController controller)
+    //    {
+    //        controller.SendHapticImpulse(0, amplitude, duration);
+    //    }
+    //}
 }
 
