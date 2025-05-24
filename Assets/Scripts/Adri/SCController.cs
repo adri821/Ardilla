@@ -7,7 +7,7 @@ public class SCController : MonoBehaviour
             AudioManager.instance.PlayMusic("90");
         }
         if (scene.Equals("Menu")) {
-            AudioManager.instance.PlayMusic("results");
+            AudioManager.instance.PlayMusic("menu");
         }
         Fade.LoadScene(scene).SetFadeTime(1f);
     }
