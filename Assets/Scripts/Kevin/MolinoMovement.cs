@@ -121,7 +121,7 @@ public class MolinoMovement : MonoBehaviour
         puntuacionCalculada = true;
         gofioTxt.text = $"Kilos de gofio: {(int)CantidadGofio}";
         puntuacionTxt.text = ((int)puntuacion).ToString();
-
+        ScoreManager.Instance.Guardar(puntuacion);
     }
 
     public void restarPuntos()
