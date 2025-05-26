@@ -5826,7 +5826,7 @@ PrefabInstance:
     - target: {fileID: 5289182684458692542, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3642967745136959407}
     - target: {fileID: 5289182684458692542, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -19543,6 +19543,7 @@ GameObject:
   - component: {fileID: 3642967745136959402}
   - component: {fileID: 3642967745136959406}
   - component: {fileID: 3117330912021408176}
+  - component: {fileID: 3642967745136959407}
   m_Layer: 5
   m_Name: UI Botones
   m_TagString: Untagged
@@ -19653,6 +19654,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &3642967745136959407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642967745136959401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a319f070955350d409c56659d8f140c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMenuOpciones: {fileID: 4059576350342570352}
+  UIElegirDificultad: {fileID: 355011547}
 --- !u!1 &3716394494422109413
 GameObject:
   m_ObjectHideFlags: 0
@@ -19912,7 +19927,6 @@ GameObject:
   - component: {fileID: 4059576350342570354}
   - component: {fileID: 4059576350342570355}
   - component: {fileID: 5915326319612489193}
-  - component: {fileID: 5915326319612489194}
   m_Layer: 5
   m_Name: MenuOpciones
   m_TagString: Untagged
@@ -20561,7 +20575,7 @@ PrefabInstance:
     - target: {fileID: 5289182684458692542, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3642967745136959407}
     - target: {fileID: 5289182684458692542, guid: e5db301629853dd4a99835fa70099d79, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -20930,20 +20944,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!114 &5915326319612489194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4059576350342570352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a319f070955350d409c56659d8f140c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIMenuOpciones: {fileID: 4059576350342570352}
-  UIElegirDificultad: {fileID: 355011547}
 --- !u!1 &5917273256829658823
 GameObject:
   m_ObjectHideFlags: 0
