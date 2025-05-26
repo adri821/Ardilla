@@ -4,13 +4,13 @@ public class DificultadManager : MonoBehaviour
 {
     public GameObject UIMenuOpciones, UIElegirDificultad;
 
-    void ElegirDificultad()
+    public void ElegirDificultad()
     {
         UIMenuOpciones.SetActive(false);
         UIElegirDificultad.SetActive(true);
     }
 
-    void VolverMenuOpciones()
+    public void VolverMenuOpciones()
     {
         UIElegirDificultad.SetActive(false);
         UIMenuOpciones.SetActive(true);
