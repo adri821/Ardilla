@@ -10960,9 +10960,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dificil
-
-'
+  m_text: "Dif\xEDcil\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}
   m_sharedMaterial: {fileID: 4050871358611866794, guid: 7853403b9a4b0574abc20135b4d677dd, type: 2}

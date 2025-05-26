@@ -48,7 +48,7 @@ public class ArdillaGolpe : MonoBehaviour {
     public static event OnEstadoChange EstadoCambiado;
 
     // Variable control Golpe direccion
-    [SerializeField] private float umbralAltura = 1.0f;
+    [SerializeField] private float umbralAltura = 2.0f;
 
     // Molino script
     [SerializeField] private MolinoMovement Puntuacion;

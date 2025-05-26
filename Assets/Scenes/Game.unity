@@ -609,7 +609,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &71177724
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -658,7 +658,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665650849800}
   golpeEstrellas: {fileID: 481345504}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &71177726
 Transform:
@@ -2225,56 +2225,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 351366293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &255939660 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3586978393777805434, guid: b70220f1d6b26954fb8d6c0876049840, type: 3}
-  m_PrefabInstance: {fileID: 5782628217299075603}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &255939666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255939660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0b9921bce4eeb49bd05815b1135ac2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractorSourceObject: {fileID: 1929622956}
-  m_HapticImpulsePlayer: {fileID: 792929883}
-  m_PlaySelectEntered: 1
-  m_SelectEnteredData:
-    m_Amplitude: 0.9
-    m_Duration: 0.1
-    m_Frequency: 0.1
-  m_PlaySelectExited: 0
-  m_SelectExitedData:
-    m_Amplitude: 0.5
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlaySelectCanceled: 0
-  m_SelectCanceledData:
-    m_Amplitude: 0.5
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlayHoverEntered: 1
-  m_HoverEnteredData:
-    m_Amplitude: 0.9
-    m_Duration: 0.1
-    m_Frequency: 0.1
-  m_PlayHoverExited: 0
-  m_HoverExitedData:
-    m_Amplitude: 0.25
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlayHoverCanceled: 0
-  m_HoverCanceledData:
-    m_Amplitude: 0.25
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_AllowHoverHapticsWhileSelecting: 0
 --- !u!1 &284342686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,9 +3368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d889047d6415e948ae12e8c71abe9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoEntreCambios: 5
-  minArdillasDormir: 1
-  maxArdillasDormir: 3
 --- !u!4 &402837052
 Transform:
   m_ObjectHideFlags: 0
@@ -4136,7 +4083,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &471403821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4185,7 +4132,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665982407745}
   golpeEstrellas: {fileID: 1231862032}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &471403823
 Transform:
@@ -4872,7 +4819,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &501503136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4921,7 +4868,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946666386478293}
   golpeEstrellas: {fileID: 1797511122}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &501503138
 Transform:
@@ -6199,56 +6146,6 @@ Transform:
   - {fileID: 1355640844}
   m_Father: {fileID: 1959031031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &694297706 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4543916536125342985, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
-  m_PrefabInstance: {fileID: 8016553611685546525}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &694297712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694297706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0b9921bce4eeb49bd05815b1135ac2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractorSourceObject: {fileID: 37863848}
-  m_HapticImpulsePlayer: {fileID: 1273477169}
-  m_PlaySelectEntered: 1
-  m_SelectEnteredData:
-    m_Amplitude: 0.5
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlaySelectExited: 0
-  m_SelectExitedData:
-    m_Amplitude: 0.5
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlaySelectCanceled: 0
-  m_SelectCanceledData:
-    m_Amplitude: 0.5
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlayHoverEntered: 1
-  m_HoverEnteredData:
-    m_Amplitude: 0.25
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlayHoverExited: 0
-  m_HoverExitedData:
-    m_Amplitude: 0.25
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_PlayHoverCanceled: 0
-  m_HoverCanceledData:
-    m_Amplitude: 0.25
-    m_Duration: 0.1
-    m_Frequency: 0
-  m_AllowHoverHapticsWhileSelecting: 0
 --- !u!1 &701871977
 GameObject:
   m_ObjectHideFlags: 0
@@ -14960,7 +14857,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1689953574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15009,7 +14906,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946666558927046}
   golpeEstrellas: {fileID: 1865420587}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &1689953576
 Transform:
@@ -15405,7 +15302,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1701623029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15454,7 +15351,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665535513276}
   golpeEstrellas: {fileID: 193454544}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &1701623031
 Transform:
@@ -17430,7 +17327,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1838204957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17479,7 +17376,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665434634026}
   golpeEstrellas: {fileID: 1358840442}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &1838204959
 Transform:
@@ -19212,7 +19109,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &2004462336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19261,7 +19158,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665324252708}
   golpeEstrellas: {fileID: 809032727}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &2004462338
 Transform:
@@ -19731,7 +19628,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &2022626315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19780,7 +19677,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665476558632}
   golpeEstrellas: {fileID: 67493057}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!4 &2022626317
 Transform:
@@ -22522,7 +22419,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &3325115194940007741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22571,7 +22468,7 @@ MonoBehaviour:
   particulasEnfado: {fileID: 5520946665634254111}
   golpeEstrellas: {fileID: 160326596}
   isMoving: 0
-  umbralAltura: 0.1
+  umbralAltura: 0.05
   Puntuacion: {fileID: 7706233140928885092}
 --- !u!82 &3325115194940007743
 AudioSource:
@@ -66704,13 +66601,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: martilloRojoShadeSmoothnoBrillo
       objectReference: {fileID: 0}
+    - target: {fileID: 8964503139766899197, guid: b70220f1d6b26954fb8d6c0876049840, type: 3}
+      propertyPath: m_HapticImpulsePlayer
+      value: 
+      objectReference: {fileID: 792929883}
+    - target: {fileID: 8964503139766899197, guid: b70220f1d6b26954fb8d6c0876049840, type: 3}
+      propertyPath: m_InteractorSourceObject
+      value: 
+      objectReference: {fileID: 1929622956}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3586978393777805434, guid: b70220f1d6b26954fb8d6c0876049840, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 255939666}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70220f1d6b26954fb8d6c0876049840, type: 3}
 --- !u!23 &5802252384014249048
 MeshRenderer:
@@ -67322,6 +67224,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1277805539}
     m_Modifications:
+    - target: {fileID: 666898143807004451, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
+      propertyPath: m_HapticImpulsePlayer
+      value: 
+      objectReference: {fileID: 1273477169}
+    - target: {fileID: 666898143807004451, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
+      propertyPath: m_InteractorSourceObject
+      value: 
+      objectReference: {fileID: 37863848}
     - target: {fileID: 5037584049120942443, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
       propertyPath: m_Name
       value: martilloAzulShadeSmoothNobrilla
@@ -67369,10 +67279,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4543916536125342985, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 694297712}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f478dac0d9f9674f882b4cd07e1eddf, type: 3}
 --- !u!1 &8140863100751385059
 GameObject:
