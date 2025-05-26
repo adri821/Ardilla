@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SleepyArdillaManager : MonoBehaviour
 {
-    [SerializeField] private float tiempoEntreCambios = 5f;
-    [SerializeField] private int minArdillasDormir = 1;
-    [SerializeField] private int maxArdillasDormir = 3;
+    [SerializeField] private float[] tiempoEntreCambios = { 5f, 3f };
+    [SerializeField] private int[] minArdillasDormir = { 1, 2 };
+    [SerializeField] private int[] maxArdillasDormir = { 3, 5 };
 
     private GameObject[] todasLasArdillas;
 
@@ -34,7 +34,7 @@ public class SleepyArdillaManager : MonoBehaviour
 
     IEnumerator CicloTrabajoDescanso()
     {
-        yield return new WaitForSeconds(tiempoEntreCambios);
+        yield return new WaitForSeconds(tiempoEntreCambios[DifficultyLevel.levelSelected]);
 
         while (true) {
             // Solo intentar dormir ardillas que estén trabajando
@@ -44,7 +44,7 @@ public class SleepyArdillaManager : MonoBehaviour
                 .ToList();
 
             if (ardillasTrabajando.Count > 0) {
-                int cantidad = Mathf.Min(Random.Range(minArdillasDormir, maxArdillasDormir + 1),
+                int cantidad = Mathf.Min(Random.Range(minArdillasDormir[DifficultyLevel.levelSelected], maxArdillasDormir[DifficultyLevel.levelSelected] + 1),
                                       ardillasTrabajando.Count);
 
                 for (int i = 0; i < cantidad; i++) {
@@ -54,7 +54,7 @@ public class SleepyArdillaManager : MonoBehaviour
                 }
             }
 
-            yield return new WaitForSeconds(tiempoEntreCambios);
+            yield return new WaitForSeconds(tiempoEntreCambios[DifficultyLevel.levelSelected]);
         }
     }
 }
