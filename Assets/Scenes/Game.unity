@@ -3418,9 +3418,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d889047d6415e948ae12e8c71abe9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoEntreCambios: []
-  minArdillasDormir: 
-  maxArdillasDormir: 
+  tiempoEntreCambios: 5
+  minArdillasDormir: 1
+  maxArdillasDormir: 3
 --- !u!4 &402837052
 Transform:
   m_ObjectHideFlags: 0

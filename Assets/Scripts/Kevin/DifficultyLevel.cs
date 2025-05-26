@@ -11,12 +11,4 @@ public class DifficultyLevel : MonoBehaviour
         else { Destroy(gameObject); return; }
         DontDestroyOnLoad(gameObject);
     }
-
-    public void DificultyNormal() {
-        levelHard = false;
-    }
-
-    public void DificultyHard() {
-        levelHard = true; 
-    }
 }

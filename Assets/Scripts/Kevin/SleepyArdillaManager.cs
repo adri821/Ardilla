@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SleepyArdillaManager : MonoBehaviour
 {
-    [SerializeField] private float tiempoEntreCambios = 5f;
-    [SerializeField] private int minArdillasDormir = 1;
-    [SerializeField] private int maxArdillasDormir = 3;
+    private float tiempoEntreCambios = 5f;
+    private int minArdillasDormir = 1;
+    private int maxArdillasDormir = 3;
 
     private GameObject[] todasLasArdillas;
 
@@ -25,7 +25,7 @@ public class SleepyArdillaManager : MonoBehaviour
     }
 
     void InicializarReferencias() {
-        if (DifficultyLevel.levelHard) {
+        if (DifficultyLevel.levelHard == true) {
             tiempoEntreCambios = 3f;
             minArdillasDormir = 2;
             maxArdillasDormir = 5;
