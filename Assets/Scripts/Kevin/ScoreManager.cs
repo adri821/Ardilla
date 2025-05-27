@@ -49,7 +49,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (DifficultyLevel.levelHard)
         {
-            TMP_InputField playerNameInputField = GameObject.Find("UI Sample/ModalSingleButton/InputField").GetComponent<TMP_InputField>();
+            TMP_InputField playerNameInputField = GameObject.Find("UI Sample/ModalSingleButton/Input Field Global Keyboard").GetComponent<TMP_InputField>();
             var playerName = playerNameInputField.text;
 
             var puntuacionTextObj = GameObject.Find("UI Sample/ModalSingleButton/PuntuationText");
