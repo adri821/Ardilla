@@ -49,50 +49,56 @@ public class ScoreManager : MonoBehaviour
     {
         if (DifficultyLevel.levelHard)
         {
-            TMP_InputField playerNameInputField = GameObject.Find("UI Sample/ModalSingleButton/Input Field Global Keyboard").GetComponent<TMP_InputField>();
+            TMP_InputField playerNameInputField = GameObject.Find("UISample/ModalSingleButton/InputFieldGlobalKeyboard/InputField").GetComponent<TMP_InputField>();
             var playerName = playerNameInputField.text;
-
-            var puntuacionTextObj = GameObject.Find("UI Sample/ModalSingleButton/PuntuationText");
+            var puntuacionTextObj = GameObject.Find("UISample/ModalSingleButton/PuntuationText");
             var puntuacionText = puntuacionTextObj.GetComponent<TextMeshProUGUI>();
-
             if (float.TryParse(puntuacionText.text, out float nuevaPuntuacion))
             {
-                Guardar(playerName, nuevaPuntuacion);
-            }
-        }
-    }
-
-    public void Guardar(string nuevoNombre, float nuevaPuntuacion)
-    {
-        if (DifficultyLevel.levelHard)
-        {
-            TMP_InputField playerNameInputField = GameObject.Find("UI Sample/ModalSingleButton/InputField").GetComponent<TMP_InputField>();
-
-            var playerName = playerNameInputField.text;
-
-            var puntuacionTextObj = GameObject.Find("UI Sample/ModalSingleButton/PuntuationText");
-
-            var puntuacionText = puntuacionTextObj.GetComponent<TMPro.TextMeshProUGUI>();
-
-            if (float.TryParse(puntuacionText.text, out puntuacion))
-            {
                 Cargar();
-                rankings.Add(new ScoreData(nuevoNombre, nuevaPuntuacion));
+                rankings.Add(new ScoreData(playerName, nuevaPuntuacion));
                 rankings.Sort((x, y) => y.puntuacion.CompareTo(x.puntuacion));
 
-                if (rankings.Count > 3)
-                {
+                if (rankings.Count > 3) {
                     rankings.RemoveAt(rankings.Count - 1);
                 }
 
                 dataFilePath = Path.Combine(Application.persistentDataPath, "rankings.json");
                 string jsonData = JsonUtility.ToJson(new ScoreListWrapper { rankings = rankings }, true);
                 File.WriteAllText(dataFilePath, jsonData);
-
-                Debug.Log("Datos guardados en: " + dataFilePath);
             }
         }
     }
+
+    //public void Guardar(string nuevoNombre, float nuevaPuntuacion)
+    //{
+    //    if (DifficultyLevel.levelHard)
+    //    {
+    //        TMP_InputField playerNameInputField = GameObject.Find("UISample/ModalSingleButton/InputField").GetComponent<TMP_InputField>();
+
+    //        var playerName = playerNameInputField.text;
+
+    //        var puntuacionTextObj = GameObject.Find("UISample/ModalSingleButton/PuntuationText");
+
+    //        var puntuacionText = puntuacionTextObj.GetComponent<TextMeshProUGUI>();
+
+    //        if (float.TryParse(puntuacionText.text, out puntuacion))
+    //        {
+    //            Cargar();
+    //            rankings.Add(new ScoreData(nuevoNombre, nuevaPuntuacion));
+    //            rankings.Sort((x, y) => y.puntuacion.CompareTo(x.puntuacion));
+
+    //            if (rankings.Count > 3)
+    //            {
+    //                rankings.RemoveAt(rankings.Count - 1);
+    //            }
+
+    //            dataFilePath = Path.Combine(Application.persistentDataPath, "rankings.json");
+    //            string jsonData = JsonUtility.ToJson(new ScoreListWrapper { rankings = rankings }, true);
+    //            File.WriteAllText(dataFilePath, jsonData);
+    //        }
+    //    }
+    //}
 
     public void Cargar()
     {
